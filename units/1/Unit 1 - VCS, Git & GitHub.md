@@ -1,104 +1,65 @@
-<!-- $theme: gaia -->
-###### Unit 1
+# VCS, Git & GitHub
 
-VCS, Git & GitHub
-===
+## Version Control
 
-# ![](Git-Logo-Black.png)
-
-###### [@kabirbaidhya](https://github.com/kabirbaidhya)
-
----
----
-<!--
-$theme: gaia
-template: gaia-->
-# Version Control
----
-<!--
-$theme: gaia
-template: default-->
-# What is VCS?
----
+#### What is VCS?
 > Version control systems are a category of software tools that help a software team manage changes to source code over time.
+
  <small>https://www.atlassian.com/git/tutorials/what-is-version-control</small>
 
-
----
-### Why Version Control?
+#### Why Version Control?
 1. Collaboration
 2. Track complete change history
 3. Branching and Merging
 4. Versions
 5. Revert/Rollback
 
----
-### Distributed Version Control Systems
+#### Distributed Version Control Systems
  * Code is hosted in a repository
  * Every client has a complete copy of the repository
  * Synchronize the changes in between client & server
  * Every clone is really a full backup of the repository
  * Example: Git, Mercurial, etc.
----
-### Distributed Version Control Systems
-# ![](distributed-git.svg)
----
-# Git
----
-# What is Git?
----
-#### A Distributed Version Control System (VCS).
----
-###### More precisely,
-##### The most popular & widely used modern version control system today.
----
-###### Originally developed by 
-##### Linus Torvalds
-###### the creator of the Linux kernel.
----
-# What's the big deal about Git?
----
-## Easy to learn
----
-## Powerful
----
-## Performance
----
-## Flexible
----
-## Open Source
----
-## And it's a de facto standard
----
-# Getting Started with Git
----
-### Installation
-##### Linux
 
-###### Ubuntu/Debain
+![](./distributed-git.svg)
+
+## Git
+
+#### What is Git?
+Git is a Distributed Version Control System (VCS). More precisely, the most popular & widely used modern version control system today.
+
+It was originally developed by Linus Torvalds the creator of the Linux kernel.
+
+
+#### So, what's the big deal about Git?
+ * Easy to learn
+ * Powerful
+ * Performance
+ * Flexible
+ * Open Source
+ * And it's a de facto standard for VCS these days
+
+#### Installation
+##### Linux
+**Ubuntu/Debain**
 ```bash
 $ sudo apt-get install git
 ```
 
-###### Centos/RHEL/Fedora
-
+**Centos/RHEL/Fedora**
 ```bash
 $ sudo yum install git
 ```
 
-<small>For other distros check the official installation docs.</small>
+For other distros check the official docs https://git-scm.com/downloads.
 
----
-### Installation
 ##### Windows
-
-1. Download the installer from 
+1. Download the installer from
    https://git-for-windows.github.io/
 2. Install Git
 
----
-### Check Installation
-Veriy that git is proplery installed with
+##### Check Installation
+Once installation is completed, veriy that git is proplery installed on your computer using
 
 ```bash
 $ git --version
@@ -108,16 +69,14 @@ It should print the git version installed on your system like this.
 git version 2.7.4
 ```
 
----
-# Configuration
----
-### Configure git user
-<small>The first thing you do after installing git is to set up your user name and email.</small>
+#### Configuration
+
+The first thing you do after installing git is to set up your user name and email.
 ```bash
 $ git config --global user.name <name>
 $ git config --global user.email <email>
 ```
-<small>Then you can check your config with</small>
+Then you can check your config with
 ```bash
 $ git config --list
 
@@ -126,11 +85,11 @@ user.email=kabirbaidhya@gmail.com
 core.editor=vim
 core.excludesfile=/home/kabir/.gitignore_global
 ```
----
-# Setting up a repository
----
-### Initialize
-The `git init` command creates a new Git repository.
+
+
+#### Setting up a repository
+
+You can use `git init` command to  create a new Git repository.
 
 ```bash
 # Go to your project directory
@@ -139,19 +98,15 @@ $ cd /your/project/directory
 # Initialize a git repository
 $ git init
 ```
----
-### Clone
 
-The `git clone` command clones a remote repository into the local machine.
+To clone an already existing remote repository, run `git clone` command. This clones a remote repository into the local machine.
 
 This will create a complete copy of remotely hosted repository in your local computer.
 ```bash
 $ git clone <repo url> [directory]
 ```
----
-# Saving Changes
----
-### Adding files
+
+#### Adding files
 In order to save your changes to the repository you'll need to `commit` your changes.
 
 You first need to select files you want to commit using this `git add` command.
@@ -165,8 +120,8 @@ $ git add <path>
 # Add all of your changes
 $ git add --all
 ```
----
-### Committing changes
+
+#### Committing changes
 The git commit command commits the staged changes to the history.
 
 ```
@@ -178,14 +133,12 @@ $ git commit
 ```
 $ git commit -m "This was my first commit"
 ```
----
-# Inspecting the repository
----
-### Checking status
-We use `git status` command to display the status of the working directory and the staging area. 
+
+#### Checking status
+We use `git status` command to display the status of the working directory and the staging area.
 
 ```bash
-$ git status 
+$ git status
 ```
 <small>If you have nothing to be committed or no untracked files then it would just show some message like this</small>
 ```bash
@@ -195,8 +148,7 @@ nothing to commit, working directory clean
 ```
 <small>But if you have some changes to be committed it lists them.</small>
 
----
-### History
+#### History
 We can use the `git log` command to display the history of committed changes on the repository.
 
 ```bash
@@ -209,11 +161,9 @@ $ git log -n <limit>
 $ git log --author="<pattern>"
 $ git log <since>..<until>
 ```
----
-# Working with remote
----
-### Adding a remote
-You need to add remote repository urls of a remote server to be able to synhronize your changes with the remote repository. 
+
+#### Adding a remote
+You need to add remote repository urls of a remote server to be able to synhronize your changes with the remote repository.
 You can do this using the `git remote add` command.
 
 ```bash
@@ -225,8 +175,8 @@ $ git remote -v
 ```
 <small>It should list the urls to the remote repositories you've added so far.</small>
 
----
-### Pushing your changes
+#### Pushing your changes
+
 Push all the changes (commits) you did to your local repository to the remote repositories is pretty simple with `git push` command.
 
 ```bash
@@ -240,8 +190,8 @@ $ git push <remote> --all
 ```bash
 $ git push origin master
 ```
----
-### Pulling remote changes
+
+#### Pulling remote changes
 The `git pull` command fetches the changes of the current branch from remote and merges it into the local branch.
 
 This is same as running the combination of `git fetch` and then `git merge`.
@@ -254,10 +204,7 @@ $ git pull <remote> [branch]
 $ git pull origin master
 ```
 
----
-# Checking out code
----
-### Checking out
+#### Checking out
 Checking out code actually means to take your working directory to a specific change (commit), branch, tag or or even different versions of files.
 
 You can do all these things with just a simple command `git checkout`.
@@ -269,10 +216,7 @@ $ git checkout <branch>         # go to another branch
 $ git checkout <tag>            # go to a tagged version of the repository
 ```
 
----
-# Branching & Merging
----
-### Branching
+#### Branching
 The `git branch` command allows you to list, create and delete branches.
 
 To create a new branch you can do
@@ -280,35 +224,37 @@ To create a new branch you can do
 $ git branch <new-branch-name>
 ```
 
----
-### Merging
-You can use `git merge` command to merge changes of a branch into the current `HEAD`. 
+#### Merging
+You can use `git merge` command to merge changes of a branch into the current `HEAD`.
 
 Merging a branch into your current branch is as simple as:
 ```bash
 $ git merge <branch>
 ```
----
-# GitHub
----
-### GitHub
- - Software development platform
- - Sort of Social networking platform for developers
- - Provides Git repository hosting services & web based platform to manage repositories and projects
- - Popular for open source projects
----
-# Read More?
----
-### Links
+
+## Excercises
+1. Create a git repository
+2. Add a python source file "hello.py" to print "Hello World!"
+3. Commit it
+4. Add a README.md file with some information about your repository.
+5. Commit README file too.
+6. Create a new repository on GitHub
+7. Add a remote `origin` pointing towards your github repository
+8. Push your local changes to GitHub
+9. Create a new branch `my-new-branch`
+10. Add a new python source file with some printing code
+11. Commit that file.
+12. Make some changes in the README and commit that too.
+13. Push your branch
+14. Create a pull request from your new branch
+15. Invite some collaborators into your repository.
+16. Add somebody as reviewer/assignee to your pull request
+17. Review/Merge pull request
+18. Pull the changes to your local repository
+
+## Read More
+
 1. https://git-scm.com/book/en/v2
 2. https://www.atlassian.com/git/tutorials/what-is-version-control
 3. https://try.github.io
 4. https://www.git-tower.com/blog/git-cheat-sheet/
----
-<!--
-$theme: gaia
-template: gaia-->
-# Thank You
-###### [@kabirbaidhya](https://github.com/kabirbaidhya)
-###### kabirbaidhya@gmail.com
-<!--footer: The slides were created using Marp. https://yhatt.github.io/marp/ -->
