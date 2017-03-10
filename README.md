@@ -9,7 +9,7 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 1. [Learning Python](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/workshop/Introduction.md) [[Slides](https://speakerdeck.com/kabirbaidhya/learning-python)]
 
 #### Version Control
-1. [VCS, Git & Github]() [[Slides]()]
+1. [VCS, Git & Github]() [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
 
 #### Python
 1. Variables, Data Types & Operators
