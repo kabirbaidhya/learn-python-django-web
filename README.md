@@ -1,6 +1,6 @@
 # Learn Python, Django & Web Development
 
-This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 classes in total, and would be a 8 weeks long course. This course mainly focuses on Python (20 hrs), Django Framework (30 hrs) and the rest of the 10 hours are to be spent on the Web Development basics, Databases & Version Control System which are platform agnostic and are preliminaries to be covered in Web Development in any platform.
+This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 classes in total, and would be a 8 weeks long course. This course mainly focuses on [Python](https://www.python.org/) (20 hrs), [Django](https://www.djangoproject.com/) (30 hrs) and the rest of the 10 hours are to be spent on the Web Development basics, Databases & Version Control System which are platform agnostic and are preliminaries to be covered in Web Development in any platform.
 
 [Read Full Course Outline](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/Outline.md)
 
