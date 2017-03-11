@@ -1,4 +1,5 @@
-# VCS, Git & GitHub
+VCS, Git & GitHub
+==================
 
 ## Version Control
 
