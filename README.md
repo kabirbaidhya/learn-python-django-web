@@ -41,3 +41,7 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 10. REST API Development
 11. Best Practices
 12. Application Deployment to Heroku
+
+
+## Stay Tuned
+Write ups & slides for the remaining units are coming up shortly. Stay Tuned :)
