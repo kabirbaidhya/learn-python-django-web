@@ -28,7 +28,7 @@ template: gaia-->
 <!--
 $theme: gaia
 template: gaia-->
-# What are Variables?
+# Variables
 ---
 <!--
 $theme: gaia
@@ -133,6 +133,51 @@ Hi! I am Kabir Baidhya .
 I'm from Kathmandu, Nepal .
 ```
 ---
+<!--
+$theme: gaia
+template: gaia-->
+# Data Types
+---
+<!--
+$theme: gaia
+template: default-->
+### Buit-in Data types
+* **Numeric**: int, float, long
+* **Boolean**: bool
+* **Sequences**: str, list, tuple, bytes
+* **Mappings**: dict
+* **Sets**: set, frozen set
+
+---
+### Immutable & Mutable types
+
+1. Immutable types
+    - <small>int, float, long, tuple, byetes, frozen set, etc.</small>
+2. Mutable types
+    - <small>list, dict, set, etc.</small>
+---
+#### Example 2: Basic data types
+```python
+an_integer = 6
+a_floating_point = 17.60
+a_boolean = True
+a_string = "Foo"
+
+print("Integer value =", an_integer)
+print("Float value =", a_floating_point)
+print("Boolean value =", a_boolean)
+print("String value =", a_string)
+```
+
+<small>Output: </small>
+```plain
+Integer value = 6
+Float value = 17.60
+Boolean value = True
+String value = Foo
+```
+
+---
 # Read More?
 ---
 ### Links
@@ -141,6 +186,9 @@ I'm from Kathmandu, Nepal .
 3. https://learnpythonthehardway.org/book/ex5.html
 4. http://www.pythonforbeginners.com/basics/python-variables
 5. https://www.learnpython.org/en/Variables_and_Types
+---
+### More links
+6. https://en.wikibooks.org/wiki/Python_Programming/Data_Types
 ---
 <!--
 $theme: gaia
