@@ -2,17 +2,17 @@
 
 This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 classes in total, and would be a 8 weeks long course. This course mainly focuses on [Python](https://www.python.org/) (20 hrs), [Django](https://www.djangoproject.com/) (30 hrs) and the rest of the 10 hours are to be spent on the Web Development basics, Databases & Version Control System which are platform agnostic and are preliminaries to be covered in Web Development in any platform.
 
-[Read Full Course Outline](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/Outline.md)
+[Read Full Course Outline](Outline.md)
 
 ## Course
 #### Introduction
 1. [Learning Python](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/workshop/Introduction.md) [[Slides](https://speakerdeck.com/kabirbaidhya/learning-python)]
 
 #### Version Control
-1. [VCS, Git & Github](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/1/Unit%201%20-%20VCS%2C%20Git%20%26%20GitHub.md) [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
+1. [VCS, Git & Github](units/1/vcs-git-and-github.md) [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
 
 #### Python
-1. Variables, Data Types & Operators
+1. [Variables, Data Types & Operators](units/2/python-variables-types-and-operators.md) [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
 2. String, Formatting & Operations
 3. Lists & Dictionaries
 4. Conditions
