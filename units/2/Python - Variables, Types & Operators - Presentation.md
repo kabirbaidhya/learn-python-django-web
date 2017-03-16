@@ -33,14 +33,14 @@ template: gaia-->
 <!--
 $theme: gaia
 template: default-->
-> A variable is a symbolic name for (or reference to) information. The variable's name represents what information the variable contains. 
+> A variable is a symbolic name for (or reference to) information. The variable's name represents what information the variable contains.
 <!--
 footer: http://www.cs.utah.edu/~germain/PPS/Topics/variables.html
 -->
 
 ---
 ### For Instance
-`foo` and `bar` could be variables that are just symbolic names which represents some information in the memory. 
+`foo` and `bar` could be variables that are just symbolic names that represent some information in the memory. 
 
 ```python
 # Variable foo contains "Some Information"
@@ -56,7 +56,7 @@ print("It contains", foo)
 print("Result = ", 5 * bar + 2)
 ```
 <!--
-footer: 
+footer:
 -->
 
 ---
@@ -67,13 +67,13 @@ template: default-->
 * Dynamically typed.
 * Every variable is an object.
 * Names are case sensitive.
-* Assigned to a value using `=` operator eg: `foo = 10`. 
+* Assigned to a value using `=` operator eg: `foo = 10`.
 * Name can contain letters, underscores (`_`) followed by numbers.
 * **Naming Convention**: lowercase names using underscore `_` to separate words. eg: `first_name`, `last_name`, etc.
 ---
 ### For instance
 Let's say we have a numeric value `20.0` and we want to store it as the radius of a circle.
-We do that like this. 
+We do that like this.
 ```python
 radius = 20.0
 ```
@@ -81,13 +81,13 @@ radius = 20.0
 <small>**Here,**
  1. `radius` is a variable.
  2. `20.0` is the value assigned to that variable.
-  
+
 </small>
 
 ---
 
 ### For instance
-Suppose that we need to store another constant value `3.14` as pi. 
+Suppose that we need to store another constant value `3.14` as pi.
 
 We can do that as well.
 ```python
@@ -114,7 +114,7 @@ print("Area of Circle =", area)
 ---
 ### In a Nutshell
 
-###### A variable is a symbol that stand in for a value 
+###### A variable is a symbol that stand in for a value
 ###### in the program.
 
 ---
@@ -157,8 +157,8 @@ template: default-->
     - <small>list, dict, set, etc.</small>
 ---
 ### Integer
-Integers are positive or negative whole numbers with no decimal points. 
-In python 2.x there are two `int` types: `int` and `long`. 
+Integers are positive or negative whole numbers with no decimal points.
+In python 2.x there are two `int` types: `int` and `long`.
 
 But in python 3.x onwards both have been unified into `int` and it behaves as `long`.
 
@@ -300,7 +300,7 @@ template: invert-->
 ---
 ### Exercise 3
 
-###### Write a program to compute the possible values of `x` from a quadratic equation ax<sup>2</sup> + bx + c = 0 (a ≠ 0) using the quadratic equation formula.
+###### Write a program to compute the possible values of `x` from a quadratic equation ax<sup>2</sup> + bx + c = 0 (a â‰  0) using the quadratic equation formula.
 
 ---
 ##### Use Quadratic Formula
@@ -316,8 +316,8 @@ template: gaia-->
 $theme: gaia
 template: default-->
 ### Input
-Getting the user input is an important part of every program. 
-In python you can use the `input` function to get the user input easily. 
+Getting the user input is an important part of every program.
+In python you can use the `input` function to get the user input easily.
 
 ```python
 # Get the input and store it in the variable.
