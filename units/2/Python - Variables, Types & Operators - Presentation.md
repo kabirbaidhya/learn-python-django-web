@@ -152,9 +152,34 @@ template: default-->
 ### Immutable & Mutable types
 
 1. Immutable types
-    - <small>int, float, long, tuple, byetes, frozen set, etc.</small>
+    - <small>int, float, long, str, tuple, frozen set, etc.</small>
 2. Mutable types
     - <small>list, dict, set, etc.</small>
+---
+### Integer
+Integers are positive or negative whole numbers with no decimal points. 
+In python 2.x there are two `int` types: `int` and `long`. 
+
+But in python 3.x onwards both have been unified into `int` and it behaves as `long`.
+
+```python
+total_lessons = 24
+```
+---
+### Float
+They represent real numbers and are written with a decimal point.
+
+```python
+percentage = 70.05
+```
+---
+### Boolean
+Variables with boolean type can represent only two values `True` or `False`.
+
+```python
+success = True
+failure = not success
+```
 ---
 #### Example 2: Basic data types
 ```python
@@ -178,8 +203,157 @@ String value = Foo
 ```
 
 ---
+
+<!--
+$theme: gaia
+template: gaia-->
+# Operators
+---
+<!--
+$theme: gaia
+template: default-->
+### Arithmetic Operators
+
+Python supports all the basic arithmetic operators just like any other programming languages.
+
+<small>
+
+|Operator   |  Operation 	| Example	|
+|:---------:|---------------|:---------:|
+| + 		| Addition    	| a + b 	|
+| _ 		| Subtration  	| a - b 	|
+| * 		| Multiplication| a * b 	|
+| / 		| Division		| a / b 	|
+| \**		| Exponentiation| a \** b 	|
+| %			| Modulo		| a % b 	|
+
+</small>
+
+---
+### Comparison Operators
+
+Common comparison operators in python are `<`, `>`, `==`, `>=`, `<=`, and `!=`.
+All of these operators return boolean results.
+
+<small>
+
+|Operator   |  Comparison 					| Example	|
+|:---------:|-------------------------------|:---------:|
+| &gt; 		| Is greater than				| a &gt; b 	|
+| &lt; 		| Is less than					| a &lt; b 	|
+| == 		| Is equal to					| a == b 	|
+| &gt;= 	| Is greater than or equal to	| a &gt;= b	|
+| &lt;=		| Is less than or equal to		| a &lt;= b	|
+| !=		| Is not equal to				| a != b 	|
+
+</small>
+
+---
+### Logical Operators
+
+All of these operators return boolean results.
+
+<small>
+
+|Operator   |  Operation 				| Example	|
+|:---------:|---------------------------|:---------:|
+| and 		| Logical AND				| a and b 	|
+| or 		| Logical OR				| a or b 	|
+| not 		| Logical NOT				| not a 	|
+
+</small>
+
+---
+### Example 3
+Try these in Python shell.
+```python
+>>> (1 * 4) + (4 / 2) - (3 * 2)
+>>> 7 % 3
+>>> 2 ** 3
+>>> 1 > 2
+>>> 1 >= 1
+>>> 1 < 5
+>>> 1 <= 5
+>>> 7 == 5
+>>> 8 != 5
+>>> 7 > 2 and 5 < 8
+>>> 7 > 10 or 5 < 8
+>>> not (5 > 7)
+```
+---
+<!--
+$theme: gaia
+template: invert-->
+### Exercise 1
+
+###### Write a program to calculate the diameter, circumference, and the area of circle using the value of `radius` and constant `PI = 3.14159`.
+
+---
+### Exercise 2
+
+###### Write a program to calculate the distance between two points represented by coordinates `(x1, y1)` and `(x2, y2)` respectively.
+
+---
+##### Use Distance Formula
+# ![](./distance_formula.png)
+
+---
+### Exercise 3
+
+###### Write a program to compute the possible values of `x` from a quadratic equation ax<sup>2</sup> + bx + c = 0 (a ≠ 0) using the quadratic equation formula.
+
+---
+##### Use Quadratic Formula
+# ![](./quadratic_formula.png)
+
+---
+<!--
+$theme: gaia
+template: gaia-->
+# User Input
+---
+<!--
+$theme: gaia
+template: default-->
+### Input
+Getting the user input is an important part of every program. 
+In python you can use the `input` function to get the user input easily. 
+
+```python
+# Get the input and store it in the variable.
+name = input("Please enter your name: ")
+
+# Print the entered value.
+print("Hi", name)
+```
+<small>Note: `input` only works in python3. You need to use `raw_input` if you're using python2.</small>
+
+---
+<!--
+$theme: gaia
+template: invert-->
+### Exercise 4
+###### Make changes in the program you wrote for exercise 1 to get the radius from the user.
+
+---
+### Exercise 5
+###### Make changes in the program you wrote for exercise 2 to get x1, y1 & x2, y2 from the user.
+---
+### Exercise 6
+###### Make changes in the program you wrote for exercise 3 to get the values of a, b & c from the user.
+---
+### Exercise 7
+###### Write a program that asks for a number and prints if it's an even number or not.
+
+---
+<!--
+$theme: gaia
+template: gaia-->
 # Read More?
 ---
+<!--
+$theme: gaia
+template: default-->
 ### Links
 1. https://docs.python.org/3.5/tutorial/introduction.html
 2. https://www.digitalocean.com/community/tutorials/how-to-use-variables-in-python-3
@@ -189,6 +363,7 @@ String value = Foo
 ---
 ### More links
 6. https://en.wikibooks.org/wiki/Python_Programming/Data_Types
+7. https://docs.python.org/3.6/reference/expressions.html#operator-precedence
 ---
 <!--
 $theme: gaia
