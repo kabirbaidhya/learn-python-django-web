@@ -1,7 +1,7 @@
 Variables, Types & Operators
 ============================
 ## Before We Begin
-Make sure we're aware of the following things that we've done in previous lessons.
+Make sure you're aware of the following things that we've done in previous lessons.
 
 1. Python - Hello World!
 2. Git
@@ -17,7 +17,7 @@ Note: If you're not aware of these. Read them at https://github.com/kabirbaidhya
 From http://www.cs.utah.edu/~germain/PPS/Topics/variables.html
 
 
-**For Instance**: `foo` and `bar` could be variables that are just symbolic names which represents some information in the memory.
+**For Instance**: `foo` and `bar` could be variables that are just symbolic names that represent some information in the memory.
 
 ```python
 # Variable foo contains "Some Information"
