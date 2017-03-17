@@ -1,0 +1,12 @@
+text = input('Enter a string: ')
+
+print("capitalize()      = ", text.capitalize())
+print("strip()           = ", text.strip())
+print("swapcase()        = ", text.swapcase())
+print("title()           = ", text.title())
+print("upper()           = ", text.upper())
+print("lower()           = ", text.lower())
+print("replace('a', 'b') = ", text.replace('a', 'b'))
+print("endswith('foo')   = ", text.endswith('foo'))
+print("startswith('bar') = ", text.startswith('bar'))
+print("find('foo')       = ", text.find('foo'))

@@ -13,7 +13,7 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 
 #### Python
 1. [Variables, Data Types & Operators](units/python/1/python-variables-types-and-operators.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-variables-data-types-and-operators)]
-2. String, Formatting & Operations
+2. String and Formatting
 3. Lists & Dictionaries
 4. Conditions
 5. Loops
