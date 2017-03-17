@@ -71,7 +71,7 @@ You would do something like this.
 print("Hello %s!" % name)
 ```
 
-## Example 2
+#### Example 2
 ```python
 # Ask the user to enter first and last name.
 first_name = input('Your first name: ')
@@ -81,7 +81,17 @@ print("\nHi %s %s!" % (first_name, last_name))
 print("It's nice to meet you.")
 ```
 
-Following are teh supported conversion types.
+#### Example 3
+```python
+# Ask the user to enter first and last name.
+PI = 3.1415
+radius = input('Enter radius of circle(meters): ')
+area = PI * float(radius) ** 2
+
+print("\nArea of circle = %.2f sq. metres" % area)
+```
+
+Following are the supported conversion types.
 
 | Conversion	| Meaning                                           |
 |---------------|---------------------------------------------------|
@@ -105,10 +115,53 @@ Following are teh supported conversion types.
 
 For in-depth information about the C-style formatting [check the official docs](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
 
-## Exercises
-1. Write a program to ask for the equation of a line in the form `y = mx + c`. And print the values of slope and y-intercept of the line. (Hint: Use `split()`.)
 
-2. Write a program to ask for the user's date of birth in `YYYY-MM-DD` format and calculate the user's age. (Hint: Use `split()` method to split the date parts.)
+## New style formatting
+The C-Style formatting is already powerful. But python provides another way for formatting as well.
+
+That is using `str.format()` method.
+
+Something like this:
+
+```python
+print("Hello {}!".format(name))
+```
+
+Pretty much the same, right?
+
+Okay, check this example on what difference this new syntax makes.
+
+#### Example 3
+```python
+first_name = input('Your first name: ')
+last_name = input('Your last name: ')
+
+# Old style formatting.
+print('Hello %s %s!' % (first_name, last_name))
+
+# New Style formatting
+print('Hello {} {}!'.format(first_name, last_name))
+print('Hello {0} {1}!'.format(first_name, last_name))
+
+# This is where, you will feel the difference.
+print('Hello {1} {0}!'.format(first_name, last_name))
+print('Hello {0} {0} {1}!'.format(first_name, last_name))
+```
+
+#### Example 4
+```python
+amount = input('Enter amount in USD: ')
+rate = 100.00
+
+amount_npr = float(amount) * rate
+print('Equivalent amount: NPR. {:.2f}'.format(amount_npr))
+```
+
+## Exercises
+1. Write a program to ask for the marks of 5 different subjects and print the total marks obtained and the total percentage.
+2. Write a program to ask for the equation of a line in the form `y = mx + c`. And print the values of slope and y-intercept of the line. (Hint: Use `split()`.)
+
+3. Write a program to ask for the user's date of birth in `YYYY-MM-DD` format and calculate the user's age. (Hint: Use `split()` method to split the date parts.)
 
 ## Read More?
 Want to read more? Go through these links.
