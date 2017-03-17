@@ -66,10 +66,6 @@ print("find('foo')       = ", text.find('foo'))
 
 ## Read More?
 Want to read more? Go through these links.
-1. https://docs.python.org/3.5/tutorial/introduction.html
-2. https://www.digitalocean.com/community/tutorials/how-to-use-variables-in-python-3
-3. https://learnpythonthehardway.org/book/ex5.html
-4. http://www.pythonforbeginners.com/basics/python-variables
-5. https://www.learnpython.org/en/Variables_and_Types
-6. https://en.wikibooks.org/wiki/Python_Programming/Data_Types
-7. https://docs.python.org/3.6/reference/expressions.html#operator-precedence
+1. https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+2. https://pyformat.info/
+3. https://www.tutorialspoint.com/python/python_strings.htm
