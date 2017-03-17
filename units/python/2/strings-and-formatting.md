@@ -7,7 +7,7 @@ In our previous lesson we discussed about Variables, basic data types and operat
 A string is traditionally a sequence of characters. Strings are one of the common data types in all programming languages and python is not an exception.
 
 String in Python is handled with `str` object and strings are immutable sequences.
-Strings can be represented in various in a variety of ways:
+Strings can be represented in various of ways in Python:
 
 ```python
 # Using Single Quotes
