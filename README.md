@@ -6,13 +6,13 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 
 ## Course
 #### Introduction
-1. [Learning Python](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/workshop/Introduction.md) [[Slides](https://speakerdeck.com/kabirbaidhya/learning-python)]
+1. [Learning Python](workshop/Introduction.md) [[Slides](https://speakerdeck.com/kabirbaidhya/learning-python)]
 
 #### Version Control
-1. [VCS, Git & Github](units/1/vcs-git-and-github.md) [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
+1. [VCS, Git & Github](units/git/vcs-git-and-github.md) [[Slides](https://speakerdeck.com/kabirbaidhya/vcs-git-and-github)]
 
 #### Python
-1. [Variables, Data Types & Operators](units/2/python-variables-types-and-operators.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-variables-data-types-and-operators)]
+1. [Variables, Data Types & Operators](units/python/1/python-variables-types-and-operators.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-variables-data-types-and-operators)]
 2. String, Formatting & Operations
 3. Lists & Dictionaries
 4. Conditions
