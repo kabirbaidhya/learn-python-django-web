@@ -40,6 +40,7 @@ Following are some of the common string methods supported by `str` objects.
 | title()                               | Return a new titlecased version of the string where words start with an uppercase character and other letters are lowercased. |
 | upper()                               | Return a new uppercased version of the string.                                                |
 | lower()                               | Return a new lowercased version of the string.                                                |
+| split(sep=None, maxsplit=-1)                               | Splits the string into substring using the `sep` argument as the separator. Return the list of splitted substrings.                                                |
 | format(*args, **kwargs)               | Perform a string formatting operation and return the formatted string.                                                 |
 | replace(old, new[, count])               | Return a new string by replacing all occurrences of substring `old` with `new`. If `count` argument is provided, only `count` number of replacements would be done.                                                 |
 
@@ -59,6 +60,7 @@ print("replace('a', 'b') = ", text.replace('a', 'b'))
 print("endswith('foo')   = ", text.endswith('foo'))
 print("startswith('bar') = ", text.startswith('bar'))
 print("find('foo')       = ", text.find('foo'))
+print("split(' ')        = ", text.split(' '))
 
 ```
 
