@@ -61,10 +61,54 @@ print("endswith('foo')   = ", text.endswith('foo'))
 print("startswith('bar') = ", text.startswith('bar'))
 print("find('foo')       = ", text.find('foo'))
 print("split(' ')        = ", text.split(' '))
-
 ```
 
+## C-Style formatting
+You probably remember the `printf` function if you've programmed in C. You can do similar string formatting in Python as well.
+
+You would do something like this.
+```python
+print("Hello %s!" % name)
+```
+
+## Example 2
+```python
+# Ask the user to enter first and last name.
+first_name = input('Your first name: ')
+last_name = input('Your last name: ')
+
+print("\nHi %s %s!" % (first_name, last_name))
+print("It's nice to meet you.")
+```
+
+Following are teh supported conversion types.
+
+| Conversion	| Meaning                                           |
+|---------------|---------------------------------------------------|
+| 'd'           | Signed integer decimal.                           |
+| 'i'           | Signed integer decimal.                           |
+| 'o'           | Signed octal value.                               |
+| 'u'           | Obsolete type – it is identical to 'd'.           |
+| 'x'           | Signed hexadecimal (lowercase).                   |
+| 'X'           | Signed hexadecimal (uppercase).                   |
+| 'e'           | Floating point exponential format (lowercase).    |
+| 'E'           | Floating point exponential format (uppercase).    |
+| 'f'           | Floating point decimal format.                    |
+| 'F'           | Floating point decimal format.                    |
+| 'g'           | Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.	          |
+| 'G'           | Floating point format. Uses uppercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.	          |
+| 'c'           | Single character (accepts integer or single character string).	             |
+| 'r'           | String (converts any Python object using repr()).	           |
+| 's'           | String (converts any Python object using str()).	            |
+| 'a'           | String (converts any Python object using ascii()).	          |
+| '%'           | No argument is converted, results in a '%' character in the result.         |
+
+For in-depth information about the C-style formatting [check the official docs](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
+
 ## Exercises
+1. Write a program to ask for the equation of a line in the form `y = mx + c`. And print the values of slope and y-intercept of the line. (Hint: Use `split()`.)
+
+2. Write a program to ask for the user's date of birth in `YYYY-MM-DD` format and calculate the user's age. (Hint: Use `split()` method to split the date parts.)
 
 ## Read More?
 Want to read more? Go through these links.
