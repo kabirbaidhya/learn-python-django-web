@@ -93,9 +93,17 @@ The following operations are supported by strings and most of the sequences.
 ```python
 s = input('Enter a string: ')
 
+print("You have entered " + s)
 print("No. of characters = %d" % len(s))
 print("First Character = %s" % s[0])
 print("Last Character = %s" % s[len(s) - 1])
+```
+
+---
+### Example 2
+
+```
+s = input('Enter a string: ')
 
 # Count the number of vowels
 print("No. of 'a' = %s" % s.count('a'))
@@ -110,10 +118,192 @@ percentage = (float(total_vowels) / len(s)) * 100
 print("\n%.2f%% are vowels." % percentage)
 ```
 ---
+### String Methods
+<small>
 
+|Method                                 | Description                                                                                   |
+|---------------------------------------|-----------------------------------------------------------------------------------------------|
+| capitalize()                          | Return a new string with its first character capitalized and the rest lowercased.             |
+| endswith(suffix[, start[, end])       | Check if the string ends with the given suffix. Return boolean result `True` or `False`       |
+| startswith(prefix[, start[, end]])    | Check if the string starts with the given prefix and return boolean result `True` or `False`  |
+| find(sub[, start[, end]])             | Return the first index in the string where substring `sub` is found within `start` to `end` of the string. Return -1 if not found.  |
+
+</small>
+
+---
+### String Methods
+<small>
+
+|Method                                 | Description                                                                                   |
+|---------------------------------------|-----------------------------------------------------------------------------------------------|
+| strip([chars])                        | Return a new string with the leading and trailing characters removed. The optional `chars` argument defaults to removing whitespace.  |
+| swapcase()                            | Return a new string with uppercase characters converted to lowercase and vice versa.          |
+| title()                               | Return a new titlecased version of the string where words start with an uppercase character and other letters are lowercased. |
+| upper()                               | Return a new uppercased version of the string.                                                |
+</small>
+
+---
+### String Methods
+
+<small>
+
+|Method                                 | Description                                                                                   |
+|---------------------------------------|-----------------------------------------------------------------------------------------------|
+| lower()                               | Return a new lowercased version of the string.                                                |
+| split(sep=None, maxsplit=-1)                               | Splits the string into substring using the `sep` argument as the separator. Return the list of splitted substrings.                                                |
+| format(*args, **kwargs)               | Perform a string formatting operation and return the formatted string.                                                 |
+| replace(old, new[, count])               | Return a new string by replacing all occurrences of substring `old` with `new`. If `count` argument is provided, only `count` number of replacements would be done.                                                 |
+
+</small>
+
+---
+### Example 3
+```python
+text = input('Enter a string: ')
+
+print("capitalize()      = ", text.capitalize())
+print("strip()           = ", text.strip())
+print("swapcase()        = ", text.swapcase())
+print("title()           = ", text.title())
+print("upper()           = ", text.upper())
+print("lower()           = ", text.lower())
+print("replace('a', 'b') = ", text.replace('a', 'b'))
+print("endswith('foo')   = ", text.endswith('foo'))
+print("startswith('bar') = ", text.startswith('bar'))
+print("find('foo')       = ", text.find('foo'))
+print("split(' ')        = ", text.split(' '))
+```
+---
+# C-Style Formatting
+---
+### C-Style formatting
+You probably remember the `printf` function if you've programmed in C. You can do similar string formatting in Python as well.
+
+You would do something like this.
+```python
+print("Hello %s!" % name)
+```
+
+---
+
+### Example 4
+```python
+# Ask the user to enter first and last name.
+first_name = input('Your first name: ')
+last_name = input('Your last name: ')
+
+print("\nHi %s %s!" % (first_name, last_name))
+print("It's nice to meet you.")
+```
+---
+### Example 5
+```python
+# Ask the user to enter first and last name.
+PI = 3.1415
+radius = input('Enter radius of circle(meters): ')
+area = PI * float(radius) ** 2
+
+print("\nArea of circle = %.2f sq. metres" % area)
+```
+---
+### Format specifiers
+Following are the supported conversion types.
+
+<small>
+
+| Conversion	| Meaning                                           |
+|---------------|---------------------------------------------------|
+| 'd'           | Signed integer decimal.                           |
+| 'i'           | Signed integer decimal.                           |
+| 'o'           | Signed octal value.                               |
+| 'u'           | Obsolete type – it is identical to 'd'.           |
+| 'x'           | Signed hexadecimal (lowercase).                   |
+| 'X'           | Signed hexadecimal (uppercase).                   |
+| 'e'           | Floating point exponential format (lowercase).    |
+| 'E'           | Floating point exponential format (uppercase).    |
+
+</small>
+
+---
+### Format specifiers
+<small>
+
+| Conversion	| Meaning                                           |
+|---------------|---------------------------------------------------|
+| 'f'           | Floating point decimal format.                    |
+| 'F'           | Floating point decimal format.                    |
+| 'g'           | Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.	          |
+| 'G'           | Floating point format. Uses uppercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.	          |
+| 'c'           | Single character (accepts integer or single character string).	             |
+</small>
+
+---
+### Format specifiers
+<small>
+
+| Conversion	| Meaning                                           |
+|---------------|---------------------------------------------------|
+| 'r'           | String (converts any Python object using repr()).	           |
+| 's'           | String (converts any Python object using str()).	            |
+| 'a'           | String (converts any Python object using ascii()).	          |
+| '%'           | No argument is converted, results in a '%' character in the result.         |
+
+
+For in-depth information about the C-style formatting [check the official docs](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
+</small>
+
+---
+# New style formatting
+---
+### New style formatting
+Python provides another way for formatting as well.
+
+That is using `str.format()` method.
+
+Something like this:
+
+```python
+print("Hello {}!".format(name))
+```
+
+Pretty much the same, right?
+
+---
+### Example 6
+Okay, check this example on what difference this new syntax makes.
+```python
+first_name = input('Your first name: ')
+last_name = input('Your last name: ')
+
+# Old style formatting.
+print('Hello %s %s!' % (first_name, last_name))
+
+# New Style formatting
+print('Hello {} {}!'.format(first_name, last_name))
+print('Hello {0} {1}!'.format(first_name, last_name))
+
+# This is where, you will feel the difference.
+print('Hello {1} {0}!'.format(first_name, last_name))
+print('Hello {0} {0} {1}!'.format(first_name, last_name))
+```
+---
+### Example 7
+It supports all the format specififiers you've used in C-Style style formatting.
+
+Check this.
+```python
+amount = input('Enter amount in USD: ')
+rate = 100.00
+
+amount_npr = float(amount) * rate
+print('Equivalent amount: NPR. {:.2f}'.format(amount_npr))
+```
+---
 <!--
 $theme: gaia
 template: invert-->
+# Exercises
+---
 ### Exercise 1
 ###### Write a program to ask for the marks of 5 different subjects and print the total marks obtained and the total percentage.
 
