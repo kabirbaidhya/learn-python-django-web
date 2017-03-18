@@ -198,13 +198,14 @@ print('Squares:', squares)
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 even_numbers = [x for x in numbers if x % 2 ==0]
 odd_numbers = [x for x in numbers if x % 2 !=0]
+
 print('Numbers:', numbers)
 print('Even numbers:', even_numbers)
 print('Odd numbers:', odd_numbers)
 ```
 ---
 
-##### Example 3
+### Example 3
 ```python
 # You can even create new lists by processing existing lists.
 words = ['this', 'is', 'just', 'a', 'test']
@@ -251,6 +252,107 @@ if len(my_list) == 0:
 else:
     print(my_list)
 ```
+---
+<!--
+$theme: gaia
+template: gaia-->
+# Dictionaries
+---
+<!--
+$theme: gaia
+template: default-->
+### Dictionaries
+Another most common data structure used in python is a dictionary.
+The main difference between sequence types like strings & lists and dictionaries is that sequences are indexed by range of numeric indexes but dictionaries are indexed by keys.
+
+Any immutable data type can be used as keys in dictionaries, usually they are strings and numbers.
+
+**You can always think of a dictionary as a set of key value pairs.**
+
+---
+### Example 6
+
+You can create a dictionary like this:
+
+```python
+user_info = {
+    'name': 'Kabir Baidhya',
+    'email': 'kabirbaidhya@gmail.com',
+    'address': 'Kathmandu, Nepal'
+}
+
+# Accessing key from a dict is just similar to lists.
+print('Name: %s' % user_info['name'])
+print('Email: %s' % user_info['email'])
+print('Address: %s' % user_info['address'])
+```
+---
+### Example 7
+Since dictionaries are mutable types you can mutate them just like lists.
+
+```python
+user_info['name'] = 'Kabir'
+user_info['email'] = user_info['email'].replace('@gmail.com', '+1@gmail.com')
+
+# If the key doesn't already exists it would create a new key-value pair.
+user_info['dob'] = '1992-07-30'
+
+# And you can store any type of values inside a dict. Even lists.
+user_info['hobbies'] = ['Music', 'Travelling', 'Coding']
+
+print(user_info)
+```
+---
+### Example 8
+You can also create a list of dictionaries.
+
+```python
+data = [
+    {
+        'name': 'Kabir Baidhya',
+        'email': 'kabirbaidhya@gmail.com'
+    },
+    {
+        'name': 'John Doe',
+        'email': 'johndoe@example.com'
+    }
+]
+
+# Print information from the dictionary
+print('Name: %s' % data[1]['name'])
+print('Email: %s' % data[1]['email'])
+```
+---
+### Common Operations
+<small>
+
+| Operation                  | Description                                                       |
+|---------------------------|-------------------------------------------------------------------|
+| len(d)                 | Return the number of items in the dictionary `d`.                               |
+| d[key]              | Access/Return the item of dictionary identified by key `key`. An error is thrown if `key` is not found in the dictionary.                                 |
+| d[key] = value                 | Set a value in the dictionary identified by `key`. |
+| del d[key]                  | Remove the item with key `key` from the dictionary. An error is thrown if `key` does not exists |
+| copy()                    | Return a shallow copy of the dictionary.  |
+| clear()                   | Remove all the items from the dictionary. |
+
+</small>
+
+---
+### Common Operations
+
+<small>
+
+| Operation                  | Description                                                       |
+|---------------------------|-------------------------------------------------------------------|
+| key in d                   | Check if the `key` exists in the dictionary. Return `True` or `False`. |
+| key not in d                   | Check if the `key` doesn't exist in the dictionary i.e just the opposite of `key in d`. Return `True` or `False`. |
+
+
+
+Read more about dictionaries [here](https://docs.python.org/3/library/stdtypes.html#typesmapping).
+
+</small>
+
 ---
 <!--
 $theme: gaia
