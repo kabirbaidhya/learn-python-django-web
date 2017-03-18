@@ -45,3 +45,9 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 
 ## Stay Tuned
 Write ups & slides for the remaining units are coming up shortly. Stay Tuned :)
+
+## License & Copyright
+
+Copyright (c) 2017 Kabir Baidhya.
+
+Licensed under  [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/)
