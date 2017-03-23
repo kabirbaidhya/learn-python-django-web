@@ -350,7 +350,7 @@ for (key, val) in user.items():
 
 </small>
 
- 2. Program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print 'X-Axis' but (5, - 5) should print '4st Quadrant'.
+ 2. Program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print `X-Axis` but (5, - 5) should print `4st Quadrant`.
  3. Program to calculate the factorial of integer `n` taken from user input.
  4. Program to store a list of several users with information: username, email and password. Ask user name and password from the user and check if the combination of username/password matches with the credentials we have in our predefined list.
 
