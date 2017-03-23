@@ -19,7 +19,7 @@ if CONDITION:
     ...
 ```
 
-The `CONDITION` could be any valid boolean expression which is evaluated. If it's value is `True` then the statements inside the block are run, if it's not evaluated as `True` the code block simply is ignored and not run.
+The `CONDITION` could be any valid boolean expression which is evaluated. If it's value is evaluated to be `True` then the statements inside the block are run, if it's not `True` the code block simply is ignored and not run.
 
 You can make use of any kind of [boolean operators](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/1/python-variables-types-and-operators.md#comparison-operators) in the condition, all you need to make sure is that the expression produces boolean result.
 
@@ -118,9 +118,9 @@ else:
 
 Here, all the conditions would be checked one by one, and the first block of code for which the condition is evaluated to be `True` will be executed and all other blocks are skipped.
 
-If none of the conditions in the chain are evaluated to be `True` then the `else` block is executed. And if there aren't any `else` block nothing happens.
+If none of the conditions in the chain are evaluated to be `True` then the `else` block is executed. And if there isn't any `else` block, nothing happens.
 
-There can be any number of `elif` lines, each followed by an indented block. (Three happen to be illustrated above.) With this construction exactly one of the indented blocks is executed. It is the one corresponding to the first True condition, or, if all conditions are False, it is the block after the final else line.
+There can be any number of `elif` lines, each followed by an indented block. But only one of the indented blocks is executed and it's the one corresponding to the first True condition, or, if all conditions are False, it is the block after the final else line.
 
 In [other languages](http://en.wikipedia.org/wiki/Conditional_%28programming%29#Else_if) this is known as `if-elseif-else`. **But remember in python it is `elif`, not `elseif`**.
 
@@ -183,7 +183,7 @@ Good Bye!
 
 Loops are the programming constructs that allow us execute or iterate over a statement block multiple times depending upon some condition.
 
-Generally we'll use two types of loops in python:
+Generally we use two types of loops in python:
  1. While Loop
  2. For Loop
 
@@ -199,7 +199,7 @@ while CONDITION:
 
 ```
 
-This `CONDITION` is a boolean expression that keeps the loop running as long as it's value is true.
+This `CONDITION` is a boolean expression that keeps the loop running as long as it's value is True.
 
 #### Example 4
 ```python
@@ -315,7 +315,7 @@ for (index, value) in enumerate(names):
 
 ```
 
-#### `for` loop over dictionaries
+#### Loop over dictionaries
 And there are situations where we need to iterate over the individual key-value pairs in a dictionary. Using `for` loop for that isn't really different than this.
 
 ```python
@@ -336,6 +336,7 @@ for (key, val) in user.items():
 ## Exercises
  1. Program to ask for the age of the person and print out the following depending upon the age.
 
+<small>
 
    | Age                    | Message                      |
    |------------------------|------------------------------|
@@ -347,6 +348,8 @@ for (key, val) in user.items():
    | 46 - 59                | You are middle-aged. |
    | 60+                    | You are old now. |
    | 120+                   | You're too old to be alive.  |
+
+</small>
 
  2. Program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print 'X-Axis' but (5, - 5) should print '4st Quadrant'.
  3. Program to calculate the factorial of integer `n` taken from user input.
