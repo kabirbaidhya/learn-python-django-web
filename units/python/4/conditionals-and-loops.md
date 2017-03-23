@@ -13,7 +13,7 @@ The most basic if statement could look like this:
 
 **Syntax**
 ```python
-if <CONDITION>:
+if CONDITION:
     STATEMENT1
     STATEMENT2
     ...
@@ -56,7 +56,7 @@ This is another variation of the `if` statement where you can also provide the b
 
 **Syntax**
 ```python
-if <CONDITION>:
+if CONDITION:
     STATEMENT1
     STATEMENT2
     ...
@@ -103,13 +103,13 @@ Sometimes we need to chain multiple conditions and it's possible using the multi
 
 **Syntax**
 ```python
-if <CONDITION1>:
+if CONDITION1:
     STATEMENTS
 
-elif <CONDITION2>:
+elif CONDITION2:
     STATEMENTS
 
-elif <CONDITION3>:
+elif CONDITION3:
     STATEMENTS
 ...
 else:
@@ -179,8 +179,92 @@ That was something else
 Good Bye!
 ```
 
+## Loops
+
+Loops are the programming constructs that allow us execute or iterate over a statement block multiple times depending upon some condition.
+
+Generally we'll use two types of loops in python:
+ 1. While Loop
+ 2. For Loop
+
+### The `while` loop
+
+The `while` loop is the simplest of all.
+It iterates over a block of code as long as the base condition holds `True`.
+
+**Syntax**
+```python
+while CONDITION:
+    STATEMENTS
+
+```
+
+This `CONDITION` is a boolean expression that keeps the loop running as long as it's value is true.
+
+#### Example 4
+```python
+a = 0
+# This will print out numbers 1 to 5
+while a < 5:
+    a = a + 1
+    print(a)
+```
+
+#### Example 5
+```python
+n = 0
+sum = 0
+
+# Calculate the sum of 5 numbers entered by user
+while n < 5:
+    value = input('Enter Number %s: ' % (n + 1))
+    sum = sum + float(value)
+    n += 1
+
+print('Sum = %.2f' % sum)
+```
+
+#### Example 6
+
+```python
+# Print Fibonacci series upto n
+a = 0
+b = 1
+n = 25
+
+while a < n:
+    print(a)
+    (a, b) = (b, a + b)
+
+```
+
+#### Example 7
+```python
+# Lists and the while loop
+names = ['John Doe', 'Jane Doe', 'Johnny Turk', 'Molly Mormon']
+i = 0
+total_names = len(names)
+print('Users:')
+
+while i < total_names:
+
+    # This is same as doing.
+    #
+    # if i == total_names - 2:
+    #     end = ' and\n'
+    # else:
+    #     end = '\n'
+    end = ' and\n' if i == total_names - 2 else '\n'
+
+    print(' - %s' % names[i], end=end)
+    i += 1
+
+```
+
+### The `for` loop
+
 ## Exercises
- 1. Write a program to ask for the age of the person and print out the following depending upon the age.
+ 1. Program to ask for the age of the person and print out the following depending upon the age.
 
 
    | Age                    | Message                      |
@@ -194,7 +278,8 @@ Good Bye!
    | 60+                    | You are old now. |
    | 120+                   | You're too old to be alive.  |
 
- 2. Write a program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print 'X-Axis' but (5, - 5) should print '4st Quadrant'.
+ 2. Program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print 'X-Axis' but (5, - 5) should print '4st Quadrant'.
+ 3. Program to calculate the factorial of integer `n` taken from user input.
 
 ## Read More?
 Want to read more? Go through these links.
