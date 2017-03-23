@@ -262,6 +262,76 @@ while i < total_names:
 ```
 
 ### The `for` loop
+The `for` loop in python is a dedicated loop for iterating over a sequence, so it is usually used with sequence data types like strings, lists, and tuples.
+
+**Syntax**
+```python
+for VARIABLE in SEQUENCE:
+    STATEMENTS
+```
+
+This would iterate over the given sequence `SEQUENCE` and assigns the value of current item of the sequence under iteration to the `VARIABLE` so that it could be used to reference the current item inside the loop block.
+
+#### Example 8
+```python
+# Loop over a list of numbers
+
+for num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    print(num)
+
+print('--')
+
+# Do the same thing using range.
+for num in range(10):
+    print(num + 1)
+
+```
+
+#### Example 9
+Let's try redoing our `while` loop with list example with `for` loop.
+
+```python
+# Lists and the for loop
+names = ['John Doe', 'Jane Doe', 'Johnny Turk', 'Molly Mormon']
+print('Users:')
+
+for name in names:
+    end = ' and\n' if name == names[-2] else '\n'
+
+    print(' - %s' % name, end=end)
+```
+
+#### Index in the `for` loop
+Sometimes we do need the value of current index of the loop or the sequence we're looping over. In those cases we can do a little tweak to the syntax to get the index too.
+
+```python
+names = ['John Doe', 'Jane Doe', 'Johnny Turk', 'Molly Mormon']
+
+# We can use enumerate() to get a tuple of (index, value)
+# instead of the regular loop variable that references to the
+# item of current iteration.
+for (index, value) in enumerate(names):
+    print(' %d \t %s' %(index, value))
+
+```
+
+#### `for` loop over dictionaries
+And there are situations where we need to iterate over the individual key-value pairs in a dictionary. Using `for` loop for that isn't really different than this.
+
+```python
+user = {
+    'name': 'John Doe',
+    'email': 'johndoe@example.com',
+    'phone': '(111) 111-1112',
+    'address': '123 6th St. Melbourne, FL 32904',
+}
+
+# This would give us the key-value pair of the dictionary
+# one by one on each iteration.
+for (key, val) in user.items():
+    print(' %s : %s' % (key, val))
+
+```
 
 ## Exercises
  1. Program to ask for the age of the person and print out the following depending upon the age.
@@ -280,10 +350,13 @@ while i < total_names:
 
  2. Program to ask for a co-ordinate point (x, y). And print in which quadrant it lies in. If it lies in any axes print the name of the axis instead. For eg: (5, 0) should print 'X-Axis' but (5, - 5) should print '4st Quadrant'.
  3. Program to calculate the factorial of integer `n` taken from user input.
+ 4. Program to store a list of several users with information: username, email and password. Ask user name and password from the user and check if the combination of username/password matches with the credentials we have in our predefined list.
 
 ## Read More?
 Want to read more? Go through these links.
-1. http://www.openbookproject.net/books/bpp4awd/ch04.html
-2. http://en.wikipedia.org/wiki/Conditional_%28programming%29
-3. https://en.wikibooks.org/wiki/Python_Programming/Conditional_Statements
+1. https://docs.python.org/3/reference/compound_stmts.html
+2. http://www.openbookproject.net/books/bpp4awd/ch04.html
+3. http://en.wikipedia.org/wiki/Conditional_%28programming%29
 4. http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/ifstatements.html
+5. https://en.wikibooks.org/wiki/Python_Programming/Conditional_Statements
+6. https://docs.python.org/3/reference/expressions.html#conditional-expressions
