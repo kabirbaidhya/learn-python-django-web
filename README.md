@@ -15,7 +15,7 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 1. [Variables, Data Types & Operators](units/python/1/python-variables-types-and-operators.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-variables-data-types-and-operators)]
 2. [String and Formatting](units/python/2/strings-and-formatting.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-strings-and-formatting)]
 3. [Lists & Dictionaries](units/python/3/lists-and-dictionaries.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-lists-and-dictionaries)]
-4. [Conditionals and Loops](units/python/4/conditionals-and-loops.md)
+4. [Conditionals and Loops](units/python/4/conditionals-and-loops.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-conditionals-and-loops)]
 5. Functions & Lamdas
 6. Exception and Error Handling
 7. Modules & Packages
