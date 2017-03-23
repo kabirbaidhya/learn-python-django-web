@@ -23,7 +23,7 @@ The `CONDITION` could be any valid boolean expression which is evaluated. If it'
 
 You can make use of any kind of [boolean operators](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/1/python-variables-types-and-operators.md#comparison-operators) in the condition, all you need to make sure is that the expression produces boolean result.
 
-**Dont' forget:**
+**Don't forget:**
 1. The colon `:` in the `if` block, which actually starts the block.
 2. Indentation, which is the part of syntax in python and a must have (unlike C-style languages where it's optional).
 3. End of indent means end of the block.
@@ -116,9 +116,9 @@ else:
     STATEMENTS
 ```
 
-Here, all the conditions would be checked one by one, and the first block of code for which the condition is evaluated to be `True` will be executed and all other blocks are skipped.
+Here, the conditions are checked one by one, and the first code block for which the condition is evaluated to be `True` will be executed and all other blocks are skipped.
 
-If none of the conditions in the chain are evaluated to be `True` then the `else` block is executed. And if there isn't any `else` block, nothing happens.
+If none of the conditions holds true, the `else` block is executed. And if there isn't any `else` block, nothing happens.
 
 There can be any number of `elif` lines, each followed by an indented block. But only one of the indented blocks is executed and it's the one corresponding to the first True condition, or, if all conditions are False, it is the block after the final else line.
 
@@ -190,7 +190,7 @@ Generally we use two types of loops in python:
 ### The `while` loop
 
 The `while` loop is the simplest of all.
-It iterates over a block of code as long as the base condition holds `True`.
+It iterates over a block of code as long as the base condition holds true.
 
 **Syntax**
 ```python
@@ -199,7 +199,7 @@ while CONDITION:
 
 ```
 
-This `CONDITION` is a boolean expression that keeps the loop running as long as it's value is True.
+This `CONDITION` is a boolean expression that keeps the loop running as long as it's value is `True`.
 
 #### Example 4
 ```python
@@ -304,12 +304,11 @@ for name in names:
 #### Index in the `for` loop
 Sometimes we do need the value of current index of the loop or the sequence we're looping over. In those cases we can do a little tweak to the syntax to get the index too.
 
+We can use `enumerate()` to get a tuple `(index, value)` instead of the regular loop variable that references to the item of current iteration.
+
 ```python
 names = ['John Doe', 'Jane Doe', 'Johnny Turk', 'Molly Mormon']
 
-# We can use enumerate() to get a tuple of (index, value)
-# instead of the regular loop variable that references to the
-# item of current iteration.
 for (index, value) in enumerate(names):
     print(' %d \t %s' %(index, value))
 
@@ -317,6 +316,8 @@ for (index, value) in enumerate(names):
 
 #### Loop over dictionaries
 And there are situations where we need to iterate over the individual key-value pairs in a dictionary. Using `for` loop for that isn't really different than this.
+
+We can make use of `dict.items()` method of a dictionary object to get a list of tuples for each key value pair in the dictionary.
 
 ```python
 user = {
@@ -326,8 +327,6 @@ user = {
     'address': '123 6th St. Melbourne, FL 32904',
 }
 
-# This would give us the key-value pair of the dictionary
-# one by one on each iteration.
 for (key, val) in user.items():
     print(' %s : %s' % (key, val))
 
@@ -347,7 +346,7 @@ for (key, val) in user.items():
    | 20 - 45                | You are adult now. |
    | 46 - 59                | You are middle-aged. |
    | 60+                    | You are old now. |
-   | 120+                   | You're too old to be alive.  |
+   | 120+                   | You're too old to still be alive.  |
 
 </small>
 
