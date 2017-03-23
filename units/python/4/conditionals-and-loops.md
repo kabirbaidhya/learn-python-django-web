@@ -1,6 +1,9 @@
 Conditionals and Loops
 ============================
 
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-conditionals-and-loops) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/3/lists-and-dictionaries.md) | [Next →]()
+
+
 Hope you're now pretty comfortable with the basic stuffs we've covered in the previous sessions so far. You may want to [check the earlier sessions](https://github.com/kabirbaidhya/learn-python-django-web) if you haven't already.
 
 ## Conditionals
