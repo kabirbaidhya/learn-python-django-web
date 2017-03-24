@@ -80,7 +80,7 @@ def fib(n):
         (a, b) = (b, a + b)
 
 # Print the series
-print max(50)
+print fib(50)
 ```
 
 ## Default Arguments
@@ -146,6 +146,35 @@ You can call functions using both the positional and keyword arguments. But you 
 sum(1, y=3, z=5)
 sum(5, 6, z=10)
 sum(10, y=2)
+```
+
+## Using the `main()` function
+Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular. And you can make use of functions for that.
+
+While you already do write functions for each of the logical actions, tasks or computations you do. You still need to write some code to trigger or kickstart them when your program starts. In many programming languages like C/C++ or even java, they strictly enforce you to define a `main()` function for that particular purpose. Although python doesn't enforces you to do the same, it is actually a good practice to do have a something like `main` function to make your code more readable and organized.
+
+For instance:
+You can do the fibonacci series from our earlier example like this:
+
+```python
+def fib(n):
+    a, b = 0, 1
+
+    while a < n:
+        print(a)
+        (a, b) = (b, a + b)
+
+
+def main():
+    n = int(input('N = '))
+
+    # Print the series upto n
+    print fib(n)
+
+
+# Now this is what triggers everything
+# when the program starts.
+main()
 ```
 
 ## Lambdas
