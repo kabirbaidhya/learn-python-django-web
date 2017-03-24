@@ -151,7 +151,7 @@ sum(10, y=2)
 ## Using the `main()` function
 Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular. And you can make use of functions for that.
 
-While you already do write functions for each of the logical actions, tasks or computations you do. You still need to write some code to trigger or kickstart them when your program starts. In many programming languages like C/C++ or even java, they strictly enforce you to define a `main()` function for that particular purpose. Although python doesn't enforces you to do the same, it is actually a good practice to do have a something like `main` function to make your code more readable and organized.
+While you already do write functions for each of the logical actions, tasks or computations you do, you still need to write some code to trigger or kickstart them when your program starts. In many programming languages like C, C++, java, go, etc. they strictly enforce you to define a `main()` function for that particular purpose. Although python doesn't enforce you to do the same, it is actually a good practice to do have a something like `main` function to make your code more readable and organized.
 
 For instance:
 You can do the fibonacci series from our earlier example like this:
