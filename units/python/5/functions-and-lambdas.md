@@ -148,6 +148,66 @@ sum(5, 6, z=10)
 sum(10, y=2)
 ```
 
+## Lambdas
+A lambda is a short anonymous function that can be used in expressions and easily passed as arguments to other function calls.
+
+For example:
+
+This is a simple function that computes a product of two numbers:
+```python
+def product(a, b):
+    return a * b
+
+c = product(2, 5)
+```
+Now you can do the same using `lambda` function as well.
+```python
+c = (lambda a, b: a * b)(2, 5)
+```
+This creates an anonymous function on the fly to compute the product and invokes it immediately with the arguments 2 and 5.
+If this is hard for you to understand. You can do it like this as well.
+```python
+func = lambda a, b: a * b
+c = func(2, 5)
+```
+Here we're doing the exact same thing; the only difference is that we're using an intermediate variable `func` to store the lambda function and use it to compute the value of c in the next line.
+
+Lambda functions are pretty handy tool when you make use of a lot of higher order functions and closures. Especially while doing functional programming, lambdas become pretty common.
+
+#### Example 5
+This program will demonstrate a very basic use case of lambda functions.
+
+```python
+# A function that returns another function
+# to add a number with another number
+def get_adder_of(a = 1):
+    return lambda x: x + a
+
+add_five = get_adder_of(5)
+add_two = get_adder_of(2)
+add_seven = get_adder_of(7)
+
+print('10 + 5 = %d' % add_five(10))
+print('8 + 2 = %d' % add_two(8))
+print('8 + 7 = %d' % add_seven(8))
+```
+
+#### Example 6
+This is another use case of a lambda function.
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+# Using map() function and lambda to
+# get a new list of squares of the original list.
+squares = list(map(lambda x: x ** 2, my_list))
+# The same thing could be achieved using list comprehension.
+squares_2 = [x ** 2 for x in my_list]
+
+print(squares)
+print(squares_2)
+```
+
 ## Read More?
 Want to read more? Go through these links.
 1. http://www.cs.utah.edu/~germain/PPS/Topics/functions.html
