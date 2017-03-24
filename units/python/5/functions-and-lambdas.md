@@ -237,6 +237,14 @@ print(squares)
 print(squares_2)
 ```
 
+## Exercises
+Do all the exercises we've done so far in previous lessons using functions to wrap up the logic.
+
+Guidelines:
+ 1. Write the primary logic of the program using function(s).
+ 2. Do not invoke the functions directly. Use a `main()` function instead.
+ 3. Protip Read user inputs and print the outputs in the `main()` function keeping just the core logic in the other functions.
+
 ## Read More?
 Want to read more? Go through these links.
 1. http://www.cs.utah.edu/~germain/PPS/Topics/functions.html
