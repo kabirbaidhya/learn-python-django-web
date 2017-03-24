@@ -38,6 +38,14 @@ And as already stated before about blocks and indentation, **don't forget:**
 #### Naming Convention
 In python it's a community wide convention to use `snake_case` (i.e lowercase with underscores to separate words) for naming functions and variables.
 
+For example these could be some examples of good function names:
+```python
+get_user_name()
+create_user()
+add_user()
+validate()
+```
+
 #### Example 1
 This could be an example of a function that computes sum of two numbers.
 ```python
@@ -107,7 +115,7 @@ sum(5, 6)
 Parentheses are the must haves when it comes to functions, both during definition and invocation.
 Not all functions do have parameters. But when they do,  you need to invoke them with arguments inside parentheses as well.
 
-It should be noted that all parameters (arguments) in python are passed by reference in Python.
+It should be noted that all parameters (arguments) are passed by reference in Python.
 
 In python, you can call a function using positional arguments, keyword arguments or a combination of both.
 
@@ -124,7 +132,7 @@ sum(1, 2, 3)        # 3 positional arguments
 sum(1, 5)           # 2 positional arguments for x & y, z takes the default value 0
 ```
 
-### Keyword arguments
+### Keyword Arguments
 Functions can also be called using keyword arguments using the parameter names in the form `arg=value`.
 
 For instance:
@@ -140,7 +148,7 @@ sum(x=1, y=5)             # 2 keyword arguments for x & y, z takes the default v
 ```
 
 ### Combine both positional and keyword arguments
-You can call functions using both the positional and keyword arguments. But you need to ensure keyword arguments must follow positional arguments. No argument should receive a value more than once.
+You can call functions using both the positional and keyword arguments. But you need to ensure keyword arguments do follow positional arguments. No argument should receive a value more than once.
 
 ```python
 sum(1, y=3, z=5)
@@ -151,7 +159,7 @@ sum(10, y=2)
 ## Using the `main()` function
 Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular. And you can make use of functions for that.
 
-While you already do write functions for each of the logical actions, tasks or computations you do, you still need to write some code to trigger or kickstart them when your program starts. In many programming languages like C, C++, java, go, etc. they strictly enforce you to define a `main()` function for that particular purpose. Although python doesn't enforce you to do the same, it is actually a good practice to do have a something like `main` function to make your code more readable and organized.
+While you already do write functions for each of the logical actions, tasks or computations you do, you still need to write some code to trigger or kickstart them when your program starts. In many programming languages like C, C++, java, go, etc. they strictly enforce you to define a `main()` function for that particular purpose. Although python doesn't enforce you to do the same, it is actually a good practice to do have something like a `main()` function to keep your code more readable and organized.
 
 For instance:
 You can do the fibonacci series from our earlier example like this:
@@ -201,7 +209,9 @@ c = func(2, 5)
 ```
 Here we're doing the exact same thing; the only difference is that we're using an intermediate variable `func` to store the lambda function and use it to compute the value of c in the next line.
 
-Lambda functions are pretty handy tool when you make use of a lot of higher order functions and closures. Especially while doing functional programming, lambdas become pretty common.
+Lambda functions are pretty handy tool when you make use of a lot of higher order functions and closures. Or need to use functions in expressions or pass them to other functions as arguments.
+
+Especially while doing functional programming, lambdas become pretty common.
 
 #### Example 5
 This program will demonstrate a very basic use case of lambda functions.
