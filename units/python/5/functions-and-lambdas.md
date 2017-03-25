@@ -1,7 +1,7 @@
 Functions and Lambdas
 ============================
 
-[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-functions-and-lambdas) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/4/conditionals-and-loops.md) | [Next →]()
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-functions-and-lambdas) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/4/conditionals-and-loops.md) | [Next →](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/6/exception-handling.md)
 
 
 ## Functions
