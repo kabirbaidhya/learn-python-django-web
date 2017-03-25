@@ -101,7 +101,7 @@ def fib(n):
         (a, b) = (b, a + b)
 
 # Print the series
-print fib(50)
+fib(50)
 ```
 ---
 ### Don't Forget
