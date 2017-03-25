@@ -156,6 +156,26 @@ sum(5, 6, z=10)
 sum(10, y=2)
 ```
 
+## The `return` statement
+The `return` keyword allows you to return a value from inside the function to the caller of the function. The use of `return` inside a function also halts the excecution and returns from the function immediately.
+
+You can either return a value or return nothing from the function.
+
+For example:
+```python
+def foo():
+    # This function returns the value 'Bar'
+    return 'Bar'
+
+
+def baz():
+    # This function returns nothing
+    return
+
+a = foo()       # a = 'Bar'
+b = baz()       # b = None
+```
+
 ## Using the `main()` function
 Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular. And you can make use of functions for that.
 

@@ -32,7 +32,7 @@ $theme: gaia
 template: default-->
 ### Functions
 
-A function is a block of code that performs a single action or performs some computation. 
+A function is a block of code that performs a single action or performs some computation.
 
 Usually functions take in some input, process it and returns the output.
 
@@ -123,7 +123,7 @@ validate()
 ---
 
 ### Default Arguments
-It's possible to set default arguments in python by assignning default values to parameters. 
+It's possible to set default arguments in python by assignning default values to parameters.
 
 They also act as optional parameters as the user can omit them.
 
@@ -145,7 +145,7 @@ sum(5, 6)
 
 <small>
 
-Do Remember: 
+Do Remember:
 * Parentheses are the must haves, both during definition and invocation.
 * All parameters are passed by reference in Python.
 
@@ -180,7 +180,7 @@ sum(x=1, y=5)             # 2 keyword arguments for x & y, z takes the default v
 ```
 ---
 ### Combine both positional and keyword arguments
-You can use both the positional and keyword arguments like this: 
+You can use both the positional and keyword arguments like this:
 
 
 ```python
@@ -192,13 +192,32 @@ sum(10, y=2)
 But ensure that keyword arguments do follow positional arguments and same arguments aren't provided more than once.
 
 ---
+### The `return` statement
+Returns a value from inside the function to the caller of the function.
+
+<small>For example:</small>
+```python
+def foo():
+    # This function returns the value 'Bar'
+    return 'Bar'
+
+
+def baz():
+    # This function returns nothing
+    return
+
+a = foo()       # a = 'Bar'
+b = baz()       # b = None
+```
+
+---
 # Using the `main()` function
 ---
 ## Using the `main()` function
 
-Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular. 
+Although python gives you full flexibility to structure your code as you like. It is recommended that you make your code organized and modular.
 
-In many programming languages they strictly enforce you to define a `main()` function and don't allow to write code outside a function. 
+In many programming languages they strictly enforce you to define a `main()` function and don't allow to write code outside a function.
 a
 Python doesn't force you to do the same, but it's a good practice to have something like  `main()` function to keep your code organized.
 
