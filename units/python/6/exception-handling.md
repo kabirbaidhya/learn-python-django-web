@@ -115,6 +115,48 @@ try:
 except SomeException as e:
     # Do something with this `e`
 ```
+
+### Example 1
+Consider the following example we did in our previous lesson.
+
+```python
+n, sum = 0, 0
+
+while n < 5:
+    value = input('Enter Number %s: ' % (n + 1))
+    sum = sum + float(value)
+    n += 1
+
+print('Sum = %.2f' % sum)
+```
+
+This program expects to get a numeric value from the user. Guess what would happen if the user supplies a non-numeric value in the prompt. Go and try it with some input like `abx`, `xyz` etc.
+
+You'll get an error like this:
+```plain
+Traceback (most recent call last):
+  File "units/python/4/example_5.py", line 7, in <module>
+    sum = sum + float(value)
+ValueError: could not convert string to float: 'abc'
+```
+
+Now here's the improved version of this program where we've handled this exception.
+```python
+n, sum = 0, 0
+
+while n < 5:
+    value = input('Enter Number %s: ' % (n + 1))
+
+    try:
+        value = float(value)
+        sum = sum + value
+        n += 1
+    except ValueError:
+        print('Invalid Input. Please enter a numeric value.\n')
+
+print('\nSum = %.2f' % sum)
+```
+
 ## Exercises
 
 ## Read More?
