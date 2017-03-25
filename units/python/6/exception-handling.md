@@ -1,4 +1,4 @@
-Functions and Lambdas
+Exception Handling
 ============================
 
 [Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-exception-handling) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/5/functions-and-lambdas.md) | [Next →]()
