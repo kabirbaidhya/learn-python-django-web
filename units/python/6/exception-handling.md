@@ -4,7 +4,7 @@ Functions and Lambdas
 [Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-exception-handling) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/5/functions-and-lambdas.md) | [Next →]()
 
 ## Exceptions
-When there are errors in your syntax, your code won't run. But even if your syntax is 100% correct and runs fine, there could be cases when you get errors during the runtime of your program. These errors that get triggered in the runtime are called **Exceptions**.
+When there are errors in your syntax, your code won't run, that is for sure. But even if your syntax is 100% correct and runs fine, there could be cases when you get errors during the runtime of your program. These errors that get triggered in the runtime are called **Exceptions**.
 
 For instance consider this example, when you're trying to divide two numbers, both received from the user input.
 
@@ -15,9 +15,10 @@ b = float(input('Second Number: '))
 # Divide a by b
 result = a / b
 ```
-As the user can provide any values for the two input, guess what happens when he provides the second value as zero. It would throw an error `ZeroDivisionError` and the program would halt.
+As the user can provide any values for the inputs, guess what happens when he provides the second value as zero. Obviously, it would throw an error. Yes, it would throw an error in the runtime named `ZeroDivisionError` and the program would halt.
 
 There might me numerous cases like this when we detect errors only in the runtime which obviously causes unexpected termination of program with error.
+
 We need to handle exceptions because unexpected termination of our program at the runtime due to some random error is certainly not what we want.
 
 ## Handling Exceptions
@@ -35,7 +36,7 @@ except ZeroDivisionError:
     print('Error: Division by Zero')
 ```
 
-Handling exceptions ensures that the program still continues to run regardless of the exceptions caused. To better explain this consider the following improvement to the program where user can try again and the program continues to run until the user wants to exit.
+Handling exceptions ensures that the program still continues to run regardless of the exceptions. To better understand this, consider the following improvement to the program where user can try again and the program continues to run until the user chooses to exit.
 
 ```python
 while True:
@@ -74,7 +75,7 @@ except SomeException:
 ```
 Firstly the statements inside the `try` block is are executed one by one. If any of the statement causes any exceptions the rest of the code in the block is skipped.
 
-If it will check if the exception that is caused is there in the `except` clause or not. If yes, then that particular except block is executed.
+It will check if the exception which is raised is there in the `except` clause or not. If yes, then that particular except block is executed.
 
 In case the exception raised is not in the `except` clause it will propagate to the higher level. If that particular exception has no handler even after reaching the highest level then the program terminates with that exception with it's message shown.
 
@@ -191,7 +192,7 @@ There are various types of exceptions in python. Check [the official docs](https
     - Handle runtime exceptions.
     - Ability to try again in case of invalid input.
 
-4. Program to ask for a filename and read the contents of the file and print it on the screen. Ensure there are no unhandled exceptions. 
+4. Program to ask for a filename and read the contents of the file and print it on the screen. Ensure there are no unhandled exceptions.
 
 
 ## Read More?
