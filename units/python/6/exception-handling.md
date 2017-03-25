@@ -80,43 +80,7 @@ In case the exception raised is not in the `except` clause it will propagate to 
 
 If no exception occurs inside the `try` block after execution of the statements in the code block, the `except` blocks are skipped.
 
-### Possible variations
-
-#### Multiple `except` blocks
-There could be any number of `except` clauses following a `try` statement.
-
-```python
-try:
-    STATEMENTS
-except SomeException:
-    # Code to handle exception
-except SomeOtherException:
-    # Code to handle exception
-except AndAnotherException:
-    # Code to handle exception
-```
-
-#### Multiple exceptions in one `except` clause
-A single `except` clause can also accept multiple exceptions as parenthesized tuple.
-
-```python
-try:
-    STATEMENTS
-except (RuntimeError, TypeError, NameError):
-    # Code to handle exception
-```
-
-#### The exception instance
-You can get the instance of the actual error or exception object using the following syntax.
-
-```python
-try:
-    STATEMENTS
-except SomeException as e:
-    # Do something with this `e`
-```
-
-### Example 1
+#### Example 1
 Consider the following example we did in our previous lesson.
 
 ```python
@@ -157,9 +121,81 @@ while n < 5:
 print('\nSum = %.2f' % sum)
 ```
 
+### Possible Variations
+
+#### Multiple `except` blocks
+There could be any number of `except` clauses following a `try` statement.
+
+```python
+try:
+    STATEMENTS
+except SomeException:
+    # Code to handle exception
+except SomeOtherException:
+    # Code to handle exception
+except AndAnotherException:
+    # Code to handle exception
+```
+
+#### Multiple exceptions in one `except` clause
+A single `except` clause can also accept multiple exceptions as parenthesized tuple.
+
+```python
+try:
+    STATEMENTS
+except (RuntimeError, TypeError, NameError):
+    # Code to handle exception
+```
+
+#### The exception instance
+You can get the instance of the actual error or exception object using the following syntax.
+
+```python
+try:
+    STATEMENTS
+except SomeException as e:
+    # Do something with this `e`
+```
+## Raising Exceptions
+We might need to raise exceptions ourselves when something unexpected happens in our program.
+
+We can use the `raise` keyword to raise exceptions like this:
+```python
+raise Exception('Hey, this was a test exception.')
+raise ValueError('Hey, this was another exception.')
+```
+
+The only argument required for the `raise` keyword is the exception itself. This could be either an exception instance or exception class(a class that derives from Exception).
+
+## Built-in Exceptions
+There are various types of exceptions in python. Check [the official docs](https://docs.python.org/3/library/exceptions.html) to know about the Built-in Exceptions in python.
+
 ## Exercises
+1. Improvements on the program to find the area of circle.
+    - Move the logic to compute the area to a function
+    - Handle runtime exceptions
+    - Ability to try again in case of invalid input.
+
+2. Improvements on the program we did to compute the age of the user by checking his date of birth?
+    - Refactor it using functions.
+    - Handle runtime exceptions.
+    - Ability to try again in case of invalid input.
+
+3. Improvements on the program to parse out the value of `m` and `c` from the equation of line `y = mx + c`
+    - Refactor the logic for parsing the equation to a function
+    - Take two user inputs: equation of two lines
+    - Write a function to get the intersection of two lines
+    - Write a function to get the angle between two lines
+    - Print angle between two lines and the point of intersection
+    - Print if they're parallel or perpendicular to each other
+    - Handle runtime exceptions.
+    - Ability to try again in case of invalid input.
+
+4. Program to ask for a filename and read the contents of the file and print it on the screen. Ensure there are no unhandled exceptions. 
+
 
 ## Read More?
 Want to read more? Go through these links.
 1. https://docs.python.org/3/tutorial/errors.html
 2. https://wiki.python.org/moin/HandlingExceptions
+3. https://docs.python.org/3/library/exceptions.html
