@@ -77,7 +77,7 @@ def max(a, b):
     return b
 
 # Print maximum value
-print max(5, 6)
+print(max(5, 6))
 ```
 ---
 ### Example 3
@@ -87,7 +87,7 @@ def max(a, b):
     return a if a > b else b
 
 # Print maximum value
-print max(5, 6)
+print(max(5, 6))
 ```
 ---
 ### Example 4
@@ -132,8 +132,8 @@ def greet(message = 'Hello'):
     return message + ' World!'
 
 # Invoke this function
-print greet()       # Hello World!
-print greet('Hi')   # Hi World!
+print(greet())       # Hello World!
+print(greet('Hi'))   # Hi World!
 ```
 
 ---
@@ -237,7 +237,7 @@ def main():
     n = int(input('N = '))
 
     # Print the series upto n
-    print fib(n)
+    fib(n)
 
 
 main()
