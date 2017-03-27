@@ -59,6 +59,13 @@ def get_angle(line1, line2):
     return angle_radian * (180 / math.pi)
 
 
+def get_lines_relation(angle):
+    if angle == 0:
+        return 'parallel'
+    elif angle == 90:
+        return 'perpendicular'
+
+
 def main():
     """
     The main function that actually executes the program.
@@ -80,7 +87,13 @@ def main():
 
     # Angle between lines.
     angle = get_angle(line1, line2)
-    print('\nAngle between lines = {} Degrees'.format(angle))
+    print('Angle between lines = {} Degrees'.format(angle))
+
+    # Relation in between lines i.e parallel or perpendicular.
+    relation = get_lines_relation(angle)
+    if not relation is None:
+        print('The lines are {}'.format(relation))
+
 
 # Run the program
 main()
