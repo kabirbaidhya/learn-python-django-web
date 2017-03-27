@@ -1,4 +1,7 @@
 
+import math
+
+
 def parse_line(equation):
     """
     Parses the given equation of line in y = mx + c, and returns
@@ -20,10 +23,10 @@ def parse_line(equation):
     return (float(m), float(c))
 
 
-def intersection_point(line1, line2):
+def get_intersection(line1, line2):
     """
     Calculates the intersection point of two lines given by their 
-    parsed tuple containing slope & y-intercept. 
+    parsed tuples each containing slope & y-intercept. 
     """
     (m1, c1) = line1
     (m2, c2) = line2
@@ -33,6 +36,27 @@ def intersection_point(line1, line2):
     y = m1 * x + c1             # As we have y = mx + c
 
     return (x, y)
+
+
+def get_angle(line1, line2):
+    """
+    Calculates the angle between two lines (in Degrees) using their
+    parsed tuples each containing slope & y-intercept
+    """
+
+    (m1, c1) = line1
+    (m2, c2) = line2
+
+    denominator = 1.0 + m1 * m2
+
+    # If this part of the expression results to zero
+    # then it implies the angle between the lines is 90 degrees.
+    if denominator == 0:
+        return 90.0
+
+    angle_radian = math.atan((m1 - m2) / denominator)
+
+    return angle_radian * (180 / math.pi)
 
 
 def main():
@@ -51,9 +75,12 @@ def main():
     line2 = parse_line(equation2)
 
     # Print the intersection point.
-    point = intersection_point(line1, line2)
-    print('\nIntersection Point: (x, y) = ({}, {})'.format(*point))
+    point = get_intersection(line1, line2)
+    print('\nIntersection Point (x, y) = ({}, {})'.format(*point))
 
+    # Angle between lines.
+    angle = get_angle(line1, line2)
+    print('\nAngle between lines = {} Degrees'.format(angle))
 
 # Run the program
 main()
