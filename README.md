@@ -1,8 +1,10 @@
 # Learn Python, Django & Web Development
 
-This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 classes in total, and would be a 8 weeks long course. This course mainly focuses on [Python](https://www.python.org/) (20 hrs), [Django](https://www.djangoproject.com/) (30 hrs) and the rest of the 10 hours are to be spent on the Web Development basics, Databases & Version Control System which are platform agnostic and are preliminaries to be covered in Web Development in any platform.
+This is a course targeted for beginners who are familiar with Programming Fundamentals (at least academically) and the contents are well suited especially for Fresh Computing students with no prior professional development experience.
 
-[Read Full Course Outline](Outline.md)
+This course mainly focuses on [Python](https://www.python.org/), [Django](https://www.djangoproject.com/) and slightly touches the basics of Web Development, Databases & Version Control System which are platform agnostic and are preliminaries to be covered in Web Development in any platform.
+
+**This is a work in progress, I'm still writing up regularly for the topics listed below. So, stay tuned.**
 
 ## Course
 #### Introduction
@@ -44,7 +46,7 @@ This is a 60 hours course, 2.5 hours per each class, 3 classes a week and 24 cla
 
 
 ## Stay Tuned
-Write ups & slides for the remaining units are coming up shortly. Stay Tuned :)
+More Write ups & slides for the remaining topics are coming up shortly. Stay Tuned :)
 
 ## License & Copyright
 
