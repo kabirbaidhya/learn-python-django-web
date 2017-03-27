@@ -72,33 +72,53 @@ def get_lines_relation(angle):
         return 'perpendicular'
 
 
+def run():
+    """
+    The actual program that runs.
+    """
+    print('Enter equations of lines in y = mx + c form:\n')
+
+    try:
+        # Get the equations of two lines from the user.
+        equation1 = input('Line 1: ')
+        equation2 = input('Line 2: ')
+
+        # Parse the two equations of two lines.
+        line1 = parse_line(equation1)
+        line2 = parse_line(equation2)
+
+        # Print the intersection point.
+        point = get_intersection(line1, line2)
+        print('\nIntersection Point = {}'.format(point))
+
+        # Angle between lines.
+        angle = get_angle(line1, line2)
+        print('Angle between lines = {} Degrees'.format(angle))
+
+        # Relation in between lines i.e parallel or perpendicular.
+        relation = get_lines_relation(angle)
+        if not relation is None:
+            print('The lines are {}'.format(relation))
+
+    except (IndexError, ValueError):
+        print(
+            '\nError parsing the equation of lines. ' +
+            'Please provide the equation in `y = mx + c` form.'
+        )
+
+
 def main():
     """
     The main function that actually executes the program.
     """
 
-    print('Enter equations of lines in y = mx + c form:\n')
+    while True:
+        run()
+        try_again = input('\nTry Again (Y/N)? ')
 
-    # Get the equations of two lines from the user.
-    equation1 = input('Line 1: ')
-    equation2 = input('Line 2: ')
-
-    # Parse the two equations of two lines.
-    line1 = parse_line(equation1)
-    line2 = parse_line(equation2)
-
-    # Print the intersection point.
-    point = get_intersection(line1, line2)
-    print('\nIntersection Point = {}'.format(point))
-
-    # Angle between lines.
-    angle = get_angle(line1, line2)
-    print('Angle between lines = {} Degrees'.format(angle))
-
-    # Relation in between lines i.e parallel or perpendicular.
-    relation = get_lines_relation(angle)
-    if not relation is None:
-        print('The lines are {}'.format(relation))
+        # If the user doesn't wants to try again, exit.
+        if try_again.upper() != 'Y':
+            break
 
 
 # Run the program
