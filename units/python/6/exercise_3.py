@@ -31,11 +31,17 @@ def get_intersection(line1, line2):
     (m1, c1) = line1
     (m2, c2) = line2
 
-    # Get the point of intersection
-    x = (c1 - c2) / (m2 - m1)
-    y = m1 * x + c1             # As we have y = mx + c
-
-    return (x, y)
+    try:
+        # Get the point of intersection
+        x = (c1 - c2) / (m2 - m1)
+        # And, as we have y = mx + c
+        y = m1 * x + c1
+        return (x, y)
+    except ZeroDivisionError:
+        # If we get the ZeroDivisionError
+        # this means slope of the lines are equal
+        # which means they're parallel and have no intersection point.
+        return None
 
 
 def get_angle(line1, line2):
@@ -83,7 +89,7 @@ def main():
 
     # Print the intersection point.
     point = get_intersection(line1, line2)
-    print('\nIntersection Point (x, y) = ({}, {})'.format(*point))
+    print('\nIntersection Point = {}'.format(point))
 
     # Angle between lines.
     angle = get_angle(line1, line2)
