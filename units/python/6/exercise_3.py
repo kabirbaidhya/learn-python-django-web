@@ -7,16 +7,12 @@ def parse_line(equation):
     Parses the given equation of line in y = mx + c, and returns
     the values of m and c.
     """
-
     # Split the equation with '=' into LHS and RHS.
     rhs = equation.split('=')[1]
-
     # Split the RHS into two parts 'mx' and 'c' with '+' operator.
     parts = rhs.split('+')
-
     # Get the value of 'm' from the first part, 'mx'.
     m = parts[0].replace('x', '').strip()
-
     # Get the value of 'c' from the second part.
     c = parts[1].strip()
 
