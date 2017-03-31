@@ -64,7 +64,7 @@ But this might not be the case all the time. Sometimes you may want modules with
 Or, you may want to conditionally check if the module is run directly as an entry-point script or is imported in other modules to trigger some executable code.
 
 ### Module's `__name__`
-In every module you define you can find a `__name__` variable whose value would be the name of the module.
+In every module you define, you can find a `__name__` variable whose value would be the name of the module.
 When you run a module directly as a script, the value of `__name__` inside that module is set to `__main__` otherwise it's value would be the module's name.
 
 Look at this example below.
