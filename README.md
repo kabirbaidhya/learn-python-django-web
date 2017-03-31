@@ -20,7 +20,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 4. [Conditionals and Loops](units/python/4/conditionals-and-loops.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-conditionals-and-loops)]
 5. [Functions & Lamdas](units/python/5/functions-and-lambdas.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-functions-and-lambdas)]
 6. [Exception Handling](units/python/6/exception-handling.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-exception-handling)]
-7. Modules & Packages
+7. [Modules & Packages](units/python/7/modules-and-packages.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-modules-and-packages)]
 8. Classes & Objects
 
 #### Database & SQL (PostgreSQL)

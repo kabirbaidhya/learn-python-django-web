@@ -1,7 +1,7 @@
 Exception Handling
 ============================
 
-[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-exception-handling) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/5/functions-and-lambdas.md) | [Next →]()
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [Slides](https://speakerdeck.com/kabirbaidhya/python-exception-handling) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/5/functions-and-lambdas.md) | [Next →](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/python/7/modules-and-packages.md)
 
 ## Exceptions
 When there are errors in your syntax, your code won't run, that is for sure. But even if your syntax is 100% correct and runs fine, there could be cases when you get errors during the runtime of your program. These errors that get triggered in the runtime are called **Exceptions**.
