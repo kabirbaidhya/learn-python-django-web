@@ -1,14 +1,12 @@
 <!-- $theme: gaia -->
-###### Unit 1
-
-VCS, Git & GitHub
-===
+###### Version Control
+Git & GitHub
+=================
 
 # ![](Git-Logo-Black.png)
 
 ###### [@kabirbaidhya](https://github.com/kabirbaidhya)
 
----
 ---
 <!--
 $theme: gaia
@@ -52,7 +50,7 @@ template: default-->
 ###### More precisely,
 ##### The most popular & widely used modern version control system today.
 ---
-###### Originally developed by 
+###### Originally developed by
 ##### Linus Torvalds
 ###### the creator of the Linux kernel.
 ---
@@ -92,7 +90,7 @@ $ sudo yum install git
 ### Installation
 ##### Windows
 
-1. Download the installer from 
+1. Download the installer from
    https://git-for-windows.github.io/
 2. Install Git
 
@@ -182,10 +180,10 @@ $ git commit -m "This was my first commit"
 # Inspecting the repository
 ---
 ### Checking status
-We use `git status` command to display the status of the working directory and the staging area. 
+We use `git status` command to display the status of the working directory and the staging area.
 
 ```bash
-$ git status 
+$ git status
 ```
 <small>If you have nothing to be committed or no untracked files then it would just show some message like this</small>
 ```bash
@@ -213,7 +211,7 @@ $ git log <since>..<until>
 # Working with remote
 ---
 ### Adding a remote
-You need to add remote repository urls of a remote server to be able to synhronize your changes with the remote repository. 
+You need to add remote repository urls of a remote server to be able to synhronize your changes with the remote repository.
 You can do this using the `git remote add` command.
 
 ```bash
@@ -282,7 +280,7 @@ $ git branch <new-branch-name>
 
 ---
 ### Merging
-You can use `git merge` command to merge changes of a branch into the current `HEAD`. 
+You can use `git merge` command to merge changes of a branch into the current `HEAD`.
 
 Merging a branch into your current branch is as simple as:
 ```bash
