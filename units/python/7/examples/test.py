@@ -15,3 +15,5 @@ def fibo(n):
 
     return result
 
+
+print(__name__)

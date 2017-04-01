@@ -7,6 +7,7 @@ def main():
     series = test.fibo(n)
     print('Fibonacci Series up to {}: \n {}'.format(n, series))
     print('Factorial of {}: {}'.format(n, test.factorial(n)))
+    print(__name__)
 
 
 main()
