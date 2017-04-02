@@ -56,7 +56,7 @@ person2.say_hello()
 ```
 
 ### The `self`
-You may have noticed the `self` keyword in above example. Here `self` is a special variable that are injected as the first argument in all the methods (functions of the objects) defined in the class. This `self` is actually a reference to the instance of the class.
+You may have noticed the `self` keyword in above example. Here `self` is a special variable that are injected as the first argument in all the methods (functions of the objects) defined in the class. This `self` is actually a reference to the instance of the class. This `self` reference is similar to `this` pointer of C++ and `this` reference in JavaScript, C# or Java.
 
 Above I have mentioned that each instance of a class has a copy of it's own properties. This is how it works, all the attributes of the object is bound to this `self` variable which is a reference to the actual object instance inside the class.
 
@@ -102,6 +102,7 @@ class Person:
 
 #### Class Methods
 Class methods are the functions that aren't related to the individual instances of the class. They're owned by the class itself and aren't bound to a any single instance. We can use the `classmethod` decorator to define a class method inside the class.
+
 Class methods are injected with the reference to the class itself as the first argument. So, you can make use of class's attributes from inside class methods but cannot access the instance's properties as it doesn't have access to the `self` object.
 
 For instance:
@@ -114,6 +115,7 @@ class Person:
     ...
 ```
 To invoke a class method is invoked on the class itself like `Person.print_count()` unlike instance methods.
+You can read more about `decorators` in python [here](https://python.swaroopch.com/more.html#decorator).
 
 #### Example 3
 ```python
@@ -148,6 +150,73 @@ emp2.say_hi()
 Employee.print_count()
 ```
 
+### Private Attributes / Methods
+In python all the class members (attributes and methods) are by default public. In other to make class members `private` you need to prefix them with the double underscore (`__`). Python uses name [name-mangling](https://docs.python.org/3/tutorial/classes.html#private-variables) to ensure they're kept private and are out of the public API.
+
+But it should be kept in mind that true "Private" instance members that cannot be accessed except from inside an object don’t exist in Python.
+
+## Inheritance
+Inheritance is one of the popular features of OOP. This allows you to create a class by inheriting attributes and behaviors of an existing class. Inheritance does provide reuse of code and logic.
+
+Inheritance can best pictured using the concept of `type` and `subtype`. The class which inherits from a class is called a sub-class and a class which is being inherited is a base class. The key benefit of inheritance is that whatever functionality the baseclass already has, the child classes can reuse them behind the scenes and they can always add extra features that are specific to only that child class objects.
+
+For instance there could be a generalized class called `Person` from which we can create other classes like `Employee`, `Customer`, `Student`. Now each of these sub-classes have everything the `Person` class already has but they can add their own features in addition to the inherited features. In other words we can say there is an `is-a` relationship in between child class and parent class, such that each instance of a sub class is an instance of the base class too i.e sub-class `is a kind of` parent class.
+
+#### Example 4
+```python
+class Person:
+    # This is a class variable.
+    total_count = 0
+
+    def __init__(self, name):
+        self.name = name
+        # Increment the total count
+        Person.total_count += 1
+
+    def greet(self):
+        print('{}: Hello'.format(self.name))
+
+    @classmethod
+    def print_count(cls):
+        print('There are {:d} people so far.'.format(cls.total_count))
+
+
+class Employee(Person):
+    def __init__(self, name, started, company):
+        Person.__init__(self, name)
+        self.started = started
+        self.company = company
+
+    def introduce(self):
+        Person.greet(self)
+        print('I have started working on {} since {}'.format(
+            self.company,
+            self.started
+        ))
+
+
+class Student(Person):
+    def __init__(self, name, grade, school):
+        Person.__init__(self, name)
+        self.grade = grade
+        self.school = school
+
+    def introduce(self):
+        Person.greet(self)
+        print('I am a student studying in grade {:d} at {}'.format(self.grade, self.school))
+
+
+def main():
+    person1 = Person('John Doe')
+    employee1 = Employee('Mark Joe', '2014-12-05', 'Acme Corp.')
+    student1 = Student('Jane Doe', 5, 'The Abc School')
+
+    person1.greet()
+    employee1.introduce()
+    student1.introduce()
+
+main()
+```
 ## Exercises
 
 ## Building a simple app
@@ -172,3 +241,5 @@ Want to read more? Go through these links.
  3. https://python.swaroopch.com/oop.html
  4. https://www.tutorialspoint.com/python/python_classes_objects.htm
  5. https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
+ 6. http://stackoverflow.com/questions/1301346/what-is-the-meaning-of-a-single-and-a-double-underscore-before-an-object-name
+ 7. https://learnpythonthehardway.org/book/ex44.html
