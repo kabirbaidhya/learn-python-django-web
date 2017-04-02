@@ -218,21 +218,16 @@ def main():
 main()
 ```
 ## Exercises
+1. Implement a Stack using a class under `datastructures` module. It should have methods: `push`, `pop`, `top`, `size` and `toList`.
+2. Implement a Queue using a class under `datastructures` module. It should have methods: `enqueue`, `dequeue`, `size`, and `toList`.
+3. Make use of inheritance to de-duplicate the code for `size` & `toList` for above classes.
 
 ## Building a simple app
 Simple CLI app for maintaining user information. Create a new git repository for this application.
 
-#### User Information App - Phase I
-1. Create a package name `app`
-2. Create a module `reader` under `app` that exposes a function `read` to read from a file and return it's contents.
-3. Create a module `writer` under `app` that exposes a function `write` to write contents to a file.
-4. Write a script `user_entry.py` that asks for user's first_name, last_name, email and address and append it in a list of users (list of dictionaries).
-5. Allow users to input any number of entries until he chooses to exit.
-6. Persist the data as a JSON encoded string into a data file `data.json` at the time of exit.
-7. Write a script `user_list.py` that prints reads the data from the file `data.json`, decodes the JSON back and displays the list of users.
-8. Make the `user_entry.py` to append the data to the file without overwriting the existing contents.
-9. Refactor Code - Create a module `user_store` under `app` with functions `load`, `get_all`, `append`, `save`.
-10. Refactor Code - Use `user_store` to replace the logic in the scripts `user_entry.py` and `user_list.py`.
+#### User Information App - Phase II
+1. Use a dedicated `User` class instead of using plain dictionary for storing user entries
+
 
 ## Read More?
 Want to read more? Go through these links.
