@@ -24,7 +24,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 8. [Classes & Objects](units/python/8/classes-and-objects.md) [[Slides](https://speakerdeck.com/kabirbaidhya/python-classes-and-objects)]
 
 #### Database & SQL (PostgreSQL)
-1. DBMS, Database and SQL
+1. [Database and SQL](units/database/1/database-and-sql) [[Slides](https://speakerdeck.com/kabirbaidhya/database-and-sql)]]
 
 #### Web Development Basics
 1. Web, Client, Server and HTTP
