@@ -257,6 +257,36 @@ The basic syntax for `SELECT` just for retrieving all the records from a table i
 SELECT col1, col2, col3... FROM table_name;
 ```
 
+If you execute this query, you will see the following results:
+```sql
+SELECT * FROM users;
+```
+
+```
+ id | first_name | last_name |     email      |     address      | password |         created_at         
+----+------------+-----------+----------------+------------------+----------+----------------------------
+  1 | Foo        | Bar       | foo@test.com   | Kathmandu, Nepal | test     | 2017-04-07 07:03:08.196081
+  2 | Test 1     | Test      | test1@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+  3 | Test 2     | Test      | test2@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+  4 | Test 3     | Test      | test3@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+(4 rows)
+```
+
+You can even select only a few columns like this:
+
+```sql
+SELECT first_name, last_name, email FROM users;
+```
+```
+ first_name | last_name |     email      
+------------+-----------+-----------------
+ Foo        | Bar       | foo@test.com   |
+ Test 1     | Test      | test1@test.com |
+ Test 2     | Test      | test2@test.com |
+ Test 3     | Test      | test3@test.com |
+(4 rows)
+```
+
 The above syntax is a very minimal syntax for `SELECT` statement. However it could have much more complex syntax when it comes to querying the tables as per our need.
 It could be like:
 
@@ -264,8 +294,72 @@ It could be like:
 SELECT col1, col2,... FROM table_name, [table_name2, ...] [JOIN another table ...] [WHERE conditions] [GROUP BY ..] [HAVING ..] [ORDER BY col1, col2 ASC|DESC];
 ```
 
-## Exercises
+### Update
+We use `UPDATE` statement to update record(s) on a table.
+**Syntax**
+```sql
+UPDATE table_name SET col1 = value1, col2 = value2... WHERE condition;
+```
 
+Try this:
+```
+UPDATE users SET last_name = 'Test' WHERE email LIKE '%test.com';
+```
+
+Now if you check the records again, you should see this:
+```
+SELECT * FROM users;
+```
+```
+ id | first_name | last_name |     email      |     address      | password |         created_at         
+----+------------+----------------+----------------+------------------+----------+----------------------
+  1 | Foo        | Test      | foo@test.com   | Kathmandu, Nepal | test     | 2017-04-07 07:03:08.196081
+  2 | Test 1     | Test      | test1@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+  3 | Test 2     | Test      | test2@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+  4 | Test 3     | Test      | test3@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+(4 rows)
+```
+
+### Delete
+We use `DELETE` statement to remove records(s) from a table.
+
+## Exercises
+**Syntax**
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+Try running this query and check the records again you'll see how it works.
+
+```sql
+DELETE FROM users WHERE id = 1 or id = 3;
+```
+
+Now if you check the records again, you should see 2 records have been removed:
+```
+SELECT * FROM users;
+```
+```
+id | first_name |   last_name    |     email      |     address      | password |         created_at         
+----+------------+----------------+----------------+------------------+----------+----------------------------
+ 2 | Test 1     | Test Test User | test1@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+ 4 | Test 3     | Test Test User | test3@test.com | Kathmandu, Nepal | test     | 2017-04-07 07:03:22.308518
+```
+
+## Exercises
+ 1. Create a database: my_app
+ 2. Create tables:
+    - The same `users` table like above.
+    - todos
+        - id
+        - user_id       - Foreign key to users table
+        - title         - String
+        - description   - Text (can be NULL)
+        - completed     - Boolean (defaults to false)
+        - created_at    - timestamp
+ 3. Insert 5 users and 8 todos
+ 4. Write a SELECT query to retrieve a list of todo items with  following information:
+    (id, title, description, user_id, user_name - concatenation of both first_name & last_name, completed, created_at). (Hints: Use `JOIN`)
 
 ## Read More?
 Want to read more? Go through these links.
