@@ -46,6 +46,9 @@ VALUES
 (3, 'Test to do 15', NOW()),
 (3, 'Test to do 16', NOW());
 
-
-
-
+--
+-- Select Query
+SELECT  t.id, title, user_id, t.created_at,
+        concat(u.first_name, ' ', u.last_name) as user_full_name
+from todos as t
+JOIN users as u ON u.id = t.user_id;
