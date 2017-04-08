@@ -27,7 +27,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 1. [Database and SQL](units/database/1/database-and-sql.md) [[Slides](https://speakerdeck.com/kabirbaidhya/database-and-sql)]
 
 #### Web Development Basics
-1. Web, Client, Server and HTTP
+1. [Web basics and HTTP](units/web/1/web-basics-and-http.md)
 2. Javascript basics and the Frontend
 
 #### Web Development with Django
