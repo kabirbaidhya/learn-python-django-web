@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaeaea;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+}
+
