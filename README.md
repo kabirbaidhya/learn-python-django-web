@@ -28,7 +28,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 
 #### Web Development Basics
 1. [Web basics and HTTP](units/web/1/web-basics-and-http.md)
-2. Javascript basics and the Frontend
+2. [Frontend and JavaScript Basics](units/web/2/frontend-and-javascript.md)
 
 #### Web Development with Django
 1. WSGI, pip & virtualenv
