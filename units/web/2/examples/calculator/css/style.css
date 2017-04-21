@@ -33,10 +33,10 @@ h1 {
     text-align: right;
 }
 
-#result {
+#output {
     font-size: 20px;
     display: inline-block;
-    height: 20px;
+    height: 24px;
     border: 1px solid #999;
     margin: 5px;
     padding: 5px;

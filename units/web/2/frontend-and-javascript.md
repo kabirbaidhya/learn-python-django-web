@@ -127,6 +127,34 @@ Now we need to load this script in our html page too. For this we'll add a `<scr
 </body>
 ```
 
+Refresh the page and you'll notice what is changed. Did you notice how we've changed the contents of the `<p>` dynamically using JavaScript?
+
+Great! Let's do one additional improvement here. Let's make the content change noticable by delaying the change after few seconds.
+
+Refactor our `hello.js` file to something like this:
+
+```javascript
+window.addEventListener('load', handleLoad);
+
+function handleLoad() {
+    // This will invoke the changeContent function after 3 seconds.
+    setTimeout(changeContent, 3000);
+}
+
+function changeContent() {
+    // This will change the content of the <p> tag.
+    document.querySelector('p').innerHTML = "I'm learning Web Development with HTML, CSS and JavaScript.";
+}
+```
+
+Now refresh the page, wait for 3 seconds and you'll see what the above code just did. Pretty neat right? Awesome. 
+
+This was a very simple Hello World example for Web Development (Frontend).
+
+## Building a Calculator
+Now let's try an example that involves a litte bit more logic and JavaScript. Here we'll build a very simple calculator application.
+
+
 ## Read More?
 If you want to dive really deep into the world of frontend, first go through these links one-by-one. They cover almost everything you need to know about the getting started with modern Web Development from the "basics" to advanced stuff slowly and gradually.
 1. https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
