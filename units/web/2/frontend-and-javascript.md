@@ -74,7 +74,7 @@ Now let's add some more content to our `index.html` page in the `<body>` section
 ```html
 <body>
   <h1>Hello World</h1>
-  <p>I'm learning to Web Development.</p>
+  <p>I'm learning Web Development.</p>
 </body>
 ```
 
@@ -88,6 +88,44 @@ p {
 ```
 Refresh the page you should see the updated content and styles are reflected.
 
+### JavaScript
+Now, unlike HTML & CSS JavaScript is a programming language that browsers support out of the box. It let's you implement the logic into your web page, or even let you transform your static web page into a web based application. 
+
+Although, javascript initially was created just do make html pages a little dynamic. Now the use of javascript has changed as web has evolved. Today, JavaScript is one of the [most popular programming languages](https://stackoverflow.com/insights/survey/2017#most-popular-technologies) of the world as of 2017 that is used to build simple to complex web applications.
+
+Now let's see how we can add some logic to our page using JavaScript.
+
+Create a file `hello.js` under `js` directory in our root folder.
+Our directory structure would look like this now:
+
+```
+css/
+  style.css
+js/
+  hello.js
+index.html
+```
+
+Save the `js/hello.js` file with the following code.
+```javascript
+window.addEventListener('load', handleLoad);
+
+function handleLoad() {
+    document.querySelector('p').innerHTML = "I'm learning Web Development with HTML, CSS and JavaScript.";
+}
+```
+
+Now we need to load this script in our html page too. For this we'll add a `<script>` tag inside our `<body>` tag like this:
+
+```html
+<body>
+  <h1>Hello World</h1>
+  <p>I'm learning Web Development.</p>
+
+  <!-- Load our JavaScript file -->
+  <script src="js/hello.js"></script>
+</body>
+```
 
 ## Read More?
 If you want to dive really deep into the world of frontend, first go through these links one-by-one. They cover almost everything you need to know about the getting started with modern Web Development from the "basics" to advanced stuff slowly and gradually.
