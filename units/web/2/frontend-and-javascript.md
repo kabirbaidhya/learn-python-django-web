@@ -151,9 +151,183 @@ Now refresh the page, wait for 3 seconds and you'll see what the above code just
 
 This was a very simple Hello World example for Web Development (Frontend).
 
+Check the full source code for this example [here](examples/hello-world).
+
 ## Building a Calculator
 Now let's try an example that involves a litte bit more logic and JavaScript. Here we'll build a very simple calculator application.
 
+### Basic Calculator
+First create a new directory with files `index.html`, `css/style.css` and `js/calculator.js`. Our directory structure should look like this:
+```
+css/
+  style.css
+js/
+  calculator.js
+index.html
+```
+
+Now add the following code in each file:
+
+**index.html**:
+```html
+<html>
+<head>
+  <title>Calculator</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="calculator">
+    <h1>Calculator</h1>
+
+    <div class="input-group">
+      <div>
+        <input id="input1" type="text" /> +
+        <input id="input2" type="text" />
+      </div>
+      <div>
+        <span id="output"></span>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button id="calculate">Calculate</button>
+    </div>
+  </div>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
+```
+
+**css/style.css**:
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaeaea;
+}
+
+body * {
+    font-size: 16px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+    font-size: 30px;
+}
+
+#calculator {
+    display: table;
+    margin: 20px auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group input {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#output {
+    font-size: 20px;
+    display: inline-block;
+    height: 24px;
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 5px;
+    width: calc(100% - 24px);
+    text-align: right;
+}
+
+.button-group {
+    padding: 5px;
+}
+```
+
+**js/calculator.js**:
+```javascript
+window.addEventListener('load', handleLoad);
+
+function handleLoad() {
+    var calculateButton = document.querySelector('#calculate');
+
+    calculateButton.addEventListener('click', handleCalculateClick);
+}
+
+function handleCalculateClick() {
+    console.log('Calculate Button Clicked.');
+
+    // Get the input & result elements
+    var input1 = document.querySelector('#input1');
+    var input2 = document.querySelector('#input2');
+    var output = document.querySelector('#output');
+
+    // Get the values.
+    var value1 = Number(input1.value);
+    var value2 = Number(input2.value);
+
+    // Just add those two values.
+    var result = value1 + value2;
+
+    // Update the output element's content.
+    output.innerHTML = result;
+}
+```
+
+Now open the `index.html` file in your browser. You should see the calculator application running.
+
+Awesome! You've just create a very simple web application.
+Check the full source code for this calculator [here](examples/calculator).
+
+### Add clear feature
+Let's add a new `Clear` button in our application that would clear the fields.
+
+Firstly, we'll need to add one more button in our html.
+
+```html
+    ...
+    <div class="button-group">
+      <button id="calculate">Calculate</button>
+      <button id="clear">Clear</button>
+    </div>
+    ...
+```
+
+Now that we have a button. Let's create a new event handler for this button in our javascript code to make it functioning.
+
+Add this new function that will handle the `click` event for our clear button.
+```javascript
+function handleClearClick() {
+    console.log('Clear Button Clicked.');
+
+    // Get the input & result elements.
+    var input1 = document.querySelector('#input1');
+    var input2 = document.querySelector('#input2');
+    var output = document.querySelector('#output');
+
+    // Clear the fields and output.
+    input1.value = '';
+    input2.value = '';
+    output.innerHTML = '';
+}
+```
+We have an event handler function now. But we need to register it for the `click` event first. For this we'll make some changes in our `handleLoad` function.
+```javascript
+function handleLoad() {
+    var calculateButton = document.querySelector('#calculate');
+    var clearButton = document.querySelector('#clear');
+
+    calculateButton.addEventListener('click', handleCalculateClick);
+    clearButton.addEventListener('click', handleClearClick);
+}
+```
 
 ## Read More?
 If you want to dive really deep into the world of frontend, first go through these links one-by-one. They cover almost everything you need to know about the getting started with modern Web Development from the "basics" to advanced stuff slowly and gradually.
