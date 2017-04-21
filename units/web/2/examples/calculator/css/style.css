@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaeaea;
+}
+
+body * {
+    font-size: 16px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+    font-size: 30px;
+}
+
+#calculator {
+    display: table;
+    margin: 20px auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group input {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#result {
+    font-size: 20px;
+    display: inline-block;
+    height: 20px;
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 5px;
+    width: calc(100% - 24px);
+    text-align: right;
+}
+
+.button-group {
+    padding: 5px;
+}
