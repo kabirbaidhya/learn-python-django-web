@@ -6,10 +6,21 @@ function handleLoad() {
     var calculateButton = document.querySelector('#calculate');
     var clearButton = document.querySelector('#clear');
     var minusButton = document.querySelector('#minus');
+    var plusButton = document.querySelector('#plus');
 
     calculateButton.addEventListener('click', handleCalculateClick);
     clearButton.addEventListener('click', handleClearClick);
     minusButton.addEventListener('click', handleMinusClick);
+    plusButton.addEventListener('click', handlePlusClick);
+}
+
+function handlePlusClick() {
+    console.log('Plus button clicked.');
+
+    var operator = document.querySelector('#operator');
+
+    op = '+';
+    operator.innerText = '+';
 }
 
 function handleMinusClick() {
