@@ -335,6 +335,8 @@ Check the full source code for this calculator [here](examples/calculator).
 2. On clicking these buttons the operator for the calcuation should change and the result should now be calculated depending upon which button is pressed.
 3. Input validation: Display invalid input message to the user if the user supplies non-number inputs.
 
+## Examples
+Check all the example source code [here](examples)
 ## Read More?
 If you want to dive really deep into the world of frontend, first go through these links one-by-one. They cover almost everything you need to know about the getting started with modern Web Development from the "basics" to advanced stuff slowly and gradually.
 1. https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
