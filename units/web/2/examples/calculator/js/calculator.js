@@ -1,5 +1,7 @@
 window.addEventListener('load', handleLoad);
 
+var op = '+'; // The calculation operator
+
 function handleLoad() {
     var calculateButton = document.querySelector('#calculate');
     var clearButton = document.querySelector('#clear');
@@ -15,6 +17,7 @@ function handleMinusClick() {
 
     var operator = document.querySelector('#operator');
 
+    op = '-';
     operator.innerText = '-';
 }
 
@@ -31,10 +34,20 @@ function handleCalculateClick() {
     var value2 = Number(input2.value);
 
     // Just add those two values.
-    var result = value1 + value2;
+    var result = calculate(value1, value2);
 
     // Update the output element's content.
     output.innerHTML = result;
+}
+
+function calculate(value1, value2) {
+    switch (op) {
+        case '+':
+            return value1 + value2;
+
+        case '-':
+            return value1 - value2;
+    }
 }
 
 function handleClearClick() {
