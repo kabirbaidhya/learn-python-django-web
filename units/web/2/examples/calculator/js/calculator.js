@@ -3,9 +3,19 @@ window.addEventListener('load', handleLoad);
 function handleLoad() {
     var calculateButton = document.querySelector('#calculate');
     var clearButton = document.querySelector('#clear');
+    var minusButton = document.querySelector('#minus');
 
     calculateButton.addEventListener('click', handleCalculateClick);
     clearButton.addEventListener('click', handleClearClick);
+    minusButton.addEventListener('click', handleMinusClick);
+}
+
+function handleMinusClick() {
+    console.log('Minus button clicked.');
+
+    var operator = document.querySelector('#operator');
+
+    operator.innerText = '-';
 }
 
 function handleCalculateClick() {
