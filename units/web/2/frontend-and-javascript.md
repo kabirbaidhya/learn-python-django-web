@@ -1,6 +1,6 @@
 Frontend and Javascript Basics
 ==============================
-[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/web/1/web-basics-and-http.md) | [Next →]()
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/web/1/web-basics-and-http.md) | [Next →](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/1/wsgi-pip-and-virtualenv.md)
 
 This is a tutorial using HTML, CSS & JavaScript to build a Calculator with an objective to let the beginner understand what HTML, CSS and JavaScript are and how we use them to built the Frontend of the Web. 
 

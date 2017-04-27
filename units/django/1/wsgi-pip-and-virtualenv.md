@@ -1,5 +1,8 @@
 WSGI, pip and virtualenv
 ========================
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/web/2/frontend-and-javascript.md) | [Next →]()
+
+
 Before we directly jump into Web Development (backend) with Django we need to be familiar with few concepts and tools. In this session we're going to be discussing about them.
 
 ## pip
