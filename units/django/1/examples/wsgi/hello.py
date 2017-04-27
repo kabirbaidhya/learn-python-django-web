@@ -8,7 +8,7 @@ def application(env, start_response):
     ]
     start_response(status, headers)
 
-    return 'Hello World'
+    return [b'Hello World']
 
 # Instantiate the server
 PORT = 8051
