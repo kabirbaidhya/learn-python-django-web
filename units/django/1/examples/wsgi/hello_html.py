@@ -29,7 +29,7 @@ def read_html(filename):
     return data
 
 # Instantiate the server
-PORT = 8051
+PORT = 8000
 httpd = make_server('localhost', PORT, application)
 
 print("Server is listening on port", PORT)
