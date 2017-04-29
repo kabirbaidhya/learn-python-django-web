@@ -87,3 +87,90 @@ todoapp
 │        └── views.py
 └── manage.py
 ```
+
+You now need to register this new app `todos` into our `todoapp` project.
+Open `todoapp/settings.py` and append `todos` to `INSTALLED_APPS` list:
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'todos'
+]
+```
+
+### Run the server
+Let's run the development server now to test our very first app.
+```bash
+ ➜ python manage.py runserver
+```
+You would see server has started now.
+
+```bash
+ ➜ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+April 28, 2017 - 21:56:40
+Django version 1.11, using settings 'todoapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[28/Apr/2017 21:56:54] "GET / HTTP/1.1" 200 1716
+Not Found: /favicon.ico
+[28/Apr/2017 21:56:54] "GET /favicon.ico HTTP/1.1" 404 1963
+[28/Apr/2017 22:00:31] "GET / HTTP/1.1" 200 1716
+```
+Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) you should be able to see our app is up and running.
+
+But you may see some warnings shown on the page. This is because we still haven't run the database migrations yet.
+
+### Migrations
+Let's run the database migrations now. First you need to press `Ctrl + C` to end the server in your terminal.
+
+Then you can run:
+```bash
+ ➜ python manage.py migrate
+```
+
+You should be able to see the migrations running.
+```bash
+ ➜ python manage.py migrate
+Operations to perform:
+    Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+    Applying contenttypes.0001_initial... OK
+    Applying auth.0001_initial... OK
+    Applying admin.0001_initial... OK
+    Applying admin.0002_logentry_remove_auto_add... OK
+    Applying contenttypes.0002_remove_content_type_name... OK
+    Applying auth.0002_alter_permission_name_max_length... OK
+    Applying auth.0003_alter_user_email_max_length... OK
+    Applying auth.0004_alter_user_username_opts... OK
+    Applying auth.0005_alter_user_last_login_null... OK
+    Applying auth.0006_require_contenttypes_0002... OK
+    Applying auth.0007_alter_validators_add_error_messages... OK
+    Applying auth.0008_alter_user_username_max_length... OK
+    Applying sessions.0001_initial... OK
+```
+
+Now re-run our server using:
+```bash
+ ➜ python manage.py runserver
+```
+And go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) again, you can see the warnings are gone by now.
+
+Great. You've just created your first app with django. Now let's change some code.
+Check the full source code for the todoapp [here](https://github.com/kabirbaidhya/django-todoapp).
+
+## Exercises
+ 1. Create a bootstrap templates for the following pages:
+    - Todo list
+    - Add todo form
+    - Edit todo form
