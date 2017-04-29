@@ -32,7 +32,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 
 #### Web Development with Django
 1. [WSGI, pip & virtualenv](units/django/1/wsgi-pip-and-virtualenv.md)
-2. Django - Hello World
+2. [Django - Hello World](units/django/1/django-helloworld.md)
 3. Templates & Views
 4. Database, ORM & Models
 5. HTML Forms & Form Processing
