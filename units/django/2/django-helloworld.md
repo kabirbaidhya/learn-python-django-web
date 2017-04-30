@@ -1,6 +1,6 @@
 Django - Hello World
 ====================
-[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/1/wsgi-pip-and-virtualenv.md) | [Next →]()
+[Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/1/wsgi-pip-and-virtualenv.md) | [Next →](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/3/templates-and-views.md)
 
 In this session we're going to dive into the [django](https://www.djangoproject.com/) framework and create our very first project using django.
 
@@ -174,3 +174,6 @@ Check the full source code for the todoapp [here](https://github.com/kabirbaidhy
     - Todo list
     - Add todo form
     - Edit todo form
+
+## Next Step
+In the [next tutorial](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/3/templates-and-views.md) we'll be working more with the templates and views to complete the UI of our application.
