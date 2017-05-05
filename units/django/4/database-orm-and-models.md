@@ -315,6 +315,27 @@ You can try manipulating the models using the shell and can refresh the browser 
 
 Awesome. Hope, this tutorial explained well what Models in Django are and how it abstracts away the complexities of the underlying database.
 
+## ProTip
+In our above tutorial we've stored our database credentials directly in our `settings.py` which is not a good practice if we're going to check in that file in our git repository.
+
+It's a recommended practice to load your credentials or deployment specific configurations using environment variables or some other gitignored file and just reference them in your `settings.py` file something like this:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+    }
+}
+```
+You can take this [sample](https://github.com/kabirbaidhya/django-todoapp/blob/step-16/todoapp/settings.py#L79-L88) as an example. 
+Here I've made use of a python package `python-dotenv` to load environment variables from a `.env` file.
+
+## Source Code
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-16).
 
 ## Read More?
