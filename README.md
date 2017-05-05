@@ -34,7 +34,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 1. [WSGI, pip & virtualenv](units/django/1/wsgi-pip-and-virtualenv.md)
 2. [Django - Hello World](units/django/2/django-helloworld.md)
 3. [Templates & Views](units/django/3/templates-and-views.md)
-4. Database, ORM & Models
+4. [Database, ORM & Models](units/django/4/database-orm-and-models.md)
 5. HTML Forms & Form Processing
 6. Validation
 7. Authentication
