@@ -333,7 +333,10 @@ DATABASES = {
 }
 ```
 You can take this [sample](https://github.com/kabirbaidhya/django-todoapp/blob/step-16/todoapp/settings.py#L79-L88) as an example. 
-Here I've made use of a python package `python-dotenv` to load environment variables from a `.env` file.
+Here I've made use of a python package `python-dotenv` to load environment variables from a `.env` file which you may install using:
+```bash
+ ➜ pip install python-dotenv
+```
 
 ## Source Code
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-16).
