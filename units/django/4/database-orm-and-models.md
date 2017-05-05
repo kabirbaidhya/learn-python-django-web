@@ -302,6 +302,19 @@ Now run your server using:
 
 And check the app in your browser, you should be able to see that our todo list is now retrieved from the database. 
 
+Now let's try updating few records using the django shell. Run these following statements.
+```python
+>>> todo = Todo.objects.get(pk=1)
+>>> todo.completed = True
+>>> todo.save()
+```
+This should update the `completed` attribute of the first todo item in the database given by `pk=1` i.e `id = 1` of the table. 
+Now refresh the browser and you should see that the first item in list `Item 1` is now shown as checked with a line-through.
+
+You can try manipulating the models using the shell and can refresh the browser to check if they're reflected.
+
+Awesome. Hope, this tutorial explained well what Models in Django are and how it abstracts away the complexities of the underlying database.
+
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-16).
 
 ## Read More?
