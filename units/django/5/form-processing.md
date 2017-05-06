@@ -48,6 +48,96 @@ todoapp=# SELECT * FROM todos_todo;
 (6 rows)
 ```
 
+## Forms
+Now that we know how to create or manipulate our data. We need to work on our forms so as to allow our users to create and update data using them. 
+
+### Create Todo Form
+We already have setup a page with the create todo form previously now we're going to make it fully functional. Before doing that we need to add a new url to which the form will be submitted to.
+
+#### Add a new url
+So, we'll start by adding a new url `save` to our `todos/urls.py` file, which should look like this:
+
+```python
+from django.conf.urls import url
+from todos import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^create$', views.create, name='create'),
+    url(r'^save$', views.save, name='save')
+]
+```
+#### Add a new view function
+Now we'll also need to add `views.save` function that we're referenced above, which should look like this:
+
+```python
+from django.shortcuts import render, redirect
+
+def save(request):
+    # TODO: Logic to save the todo item here.
+
+    return redirect('index')
+```
+
+Currently, the above code does nothing but just redirect back to `index` page url. But here we need to get the data received from the form, save it and then finally redirect to index.
+
+### Saving the form data
+Let's update the `save` function we've just created to receive data from the form and save it using our `Todo` model. The code should look like this:
+
+```python
+from django.shortcuts import render, redirect
+from django.utils import timezone
+from todos.models import Todo
+
+def save(request):
+    # Get the form data from the request.
+    title = request.POST.get('title')
+    description = request.POST.get('description')
+
+    # Create a new todo item with the data.
+    Todo.objects.create(
+        title=title,
+        description=description,
+        created_at=timezone.now()
+    )
+
+    # Redirect back to index page
+    return redirect('index')
+
+```
+
+### Updating the HTML form
+We now need to update our HTML form to submit the data properly to the server like what we've expected in the above code.
+
+We'll need to ensure the following things:
+ 1. Form should be submitted to url `save` (`name='save'`).
+ 2. Form should be submitted using method `POST`
+ 3. Two form fields are required to be sent `title` and `description` for the todo item.
+ 4. And CSRF token should be sent along with the form too.
+
+After making these changes to our plain html form it should look like this:
+```html
+{% extends 'base.html' %} 
+{% block content%}
+<h3>Add Todo</h3>
+<div class="todo-form">
+    <form method="post" action="{% url 'save' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="input-todo-title">Title</label>
+            <input type="text" name="title" class="form-control" id="input-todo-title" placeholder="What do you want to do?">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" class="form-control" id="description" placeholder="Description"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
+```
+
 ## Source Code
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/master).
 
