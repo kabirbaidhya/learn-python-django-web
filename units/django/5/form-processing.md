@@ -137,8 +137,33 @@ After making these changes to our plain html form it should look like this:
 </div>
 {% endblock %}
 ```
+### Test your form
+Now that you've written all the code for the form and form processing. Let's go and test it in the browser.
+
+First run the app server.
+```bash
+ ➜ python manage.py runserver
+```
+
+And check it on the browser. When you submit the create todo form now, it should add a new todo item and take you back to the index page showing you the latest data.
+
+## Further form processing
+If you've made it upto here, that's awesome. Now that we have the ability to create a new todo item, we should have a feature of editing an existing todo item too.
+
+Let's see how we can do that. We'll do it in the following steps:
+
+ 1. Firstly create a new url to show the edit form `r'^edit/todos/(\d+)/$'`.
+ 2. Create a view function to handle the edit page request which should send back the edit form html with existing data populated.
+ 3. Create a form edit html form for the edit page
+ 4. Make changes in the `save` view function to support form submission from the edit page too which should update the item.
+ 5. Link "Edit" link of individual todo items to it's edit page.
 
 ## Source Code
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/master).
 
 ## Read More?
+ 1. https://docs.djangoproject.com/en/1.11/topics/forms/
+ 2. https://docs.djangoproject.com/en/1.11/topics/http/urls/
+ 3. https://docs.djangoproject.com/en/1.11/ref/request-response/
+ 4. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models 
+ 5. https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms
