@@ -159,7 +159,7 @@ Let's see how we can do that. We'll do it in the following steps:
  5. Link "Edit" link of individual todo items to it's edit page.
 
 ## Source Code
-Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/master).
+Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-17).
 
 ## Read More?
  1. https://docs.djangoproject.com/en/1.11/topics/forms/
