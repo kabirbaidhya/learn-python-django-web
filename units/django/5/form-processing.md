@@ -2,7 +2,7 @@ Form Processing
 ========================
 [Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/4/database-orm-and-models.md) | [Next →]()
 
-In the previous tutorial we've used integrated our app with the database and introduced the concept of Django Models. Also, 
+In the [previous tutorial]((https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/4/database-orm-and-models.md)) we've integrated our app with [the database](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/database/1/database-and-sql.md) and introduced the concept of [Django Models](https://docs.djangoproject.com/en/1.11/topics/db/models/). Also, 
 we used the `Todo` model to fetch all the todo items from the database and display it on the UI dynamically. In this tutorial we'll go one step further, by adding a feature to allow creating a new todo item from the form and also allow editing an existing todo item.
 
 ## Create/Update data
