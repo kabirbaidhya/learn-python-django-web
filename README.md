@@ -36,7 +36,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 3. [Templates & Views](units/django/3/templates-and-views.md)
 4. [Database, ORM & Models](units/django/4/database-orm-and-models.md)
 5. [Form Processing](units/django/5/form-processing.md)
-6. Validation
+6. [Validation](units/django/6/validation.md)
 7. Authentication
 8. Django Admin
 9. Full backend development
