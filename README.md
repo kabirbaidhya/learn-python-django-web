@@ -38,7 +38,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 5. [Form Processing](units/django/5/form-processing.md)
 6. [Validation](units/django/6/validation.md)
 7. [Asynchronous HTTP Requests (Ajax)](units/django/7/ajax.md)
-8. Django Admin
+8. [Django Authentication & Admin](units/django/8/auth.md)
 9. Full backend development
 10. REST API Development
 11. Best Practices
