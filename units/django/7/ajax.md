@@ -12,7 +12,7 @@ In this tutorial we'll be using Ajax requests to update the `completed` attribut
 ## Adding a JSON API endpoint
 Before we can send HTTP requests to the server, we need to create a new url endpoint in our django app to accept it. In this case we don't need to return any HTML data from the server as we just need to update the todo item on the server and return. So, here we'll create a url endpoint that accepts JSON data and responds with JSON too.
 
-We'll be refering this new url endpoint as an API endpoint because it's different from the urls where HTML forms are synchronously submitted to or the urls where the users navigate directly, but instead it's just an API provided by the server to the client to do some operations based upon HTTP. So, we'll call it JSON API for now. 
+We'll be refering this new url endpoint as an API endpoint because it's different from the urls where HTML forms are synchronously submitted to or the urls where the users navigate directly, but instead it's just an API provided by the server to the client to do some operations based upon HTTP. So, we'll call it JSON API for now.
 
 ### Add a new view
 First, we'll add a new file `todos/views_api.py`. Here we will have a function `update` which will be responsible for handling our API request on the server.
@@ -46,7 +46,7 @@ def update(request, id):
 
 ```
 
-Here, we are using the HTTP `PATCH` method which might seem new to you as previously we're only used to `GET` and `POST` methods. We used `PATCH` here as this request will update our todo item partially which is as per the [HTTP spec](https://tools.ietf.org/html/rfc2068#section-19.6.1.1). 
+Here, we are using the HTTP `PATCH` method which might seem new to you as previously we're only used to `GET` and `POST` methods. We used `PATCH` here as this request will update our todo item partially which is as per the [HTTP spec](https://tools.ietf.org/html/rfc2068#section-19.6.1.1).
 
 We'll learn more about HTTP methods and JSON based APIs in later tutorials on REST APIs.
 
@@ -85,7 +85,7 @@ Also make sure you've provided the todo id of the todo item for which `completed
 
 Now, since we're accepting only `PATCH` http method, set the method to `PATCH` from the dropdown near the url.
 
-Our code above expects the request data to be JSON containing a boolean attribute `completed`. 
+Our code above expects the request data to be JSON containing a boolean attribute `completed`.
 ```python
     # Get the params from the payload.
     data = json.loads(request.body.decode('utf-8'))
@@ -114,7 +114,7 @@ Now, if you come back to your browser and refresh you'll find it's completed att
 You can test this API for other todo items too just by changing the `id` value in the url to something else like this:
 ```
 http://localhost:8000/api/todos/5
-``` 
+```
 
 ## Using the JSON API
 Now that we've created our new update HTTP API on the server side, we'll need to be able to hit that API from our client-side JavaScript asynchronously in the background, this is what Ajax means.
@@ -160,6 +160,75 @@ function handleTodoCheckChange(e) {
     // TODO: Implement logic here.
 }
 ```
+
+We'll also need to register this event handler for the `change` event of the checkboxes. Since, we could have several different checkboxes we will register this for all of the checkboxes in loop like this.
+
+```javascript
+var checkboxes = document.querySelectorAll('.todo-complete-check');
+
+if (checkboxes) {
+    // Register check event handler for each checkbox
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener('change', handleTodoCheckChange);
+    }
+}
+```
+
+Now we'll need to register event handlers when the window has just finished loading. So, we'll add this code in the `handleLoad` function.
+
+It should look like this now:
+```javascript
+function handleLoad() {
+    var form = document.querySelector('.todo-form form');
+    var messages = document.querySelector('.messages');
+    var checkboxes = document.querySelectorAll('.todo-complete-check');
+
+    if (checkboxes) {
+        // Register check event handler for each checkbox
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('change', handleTodoCheckChange);
+        }
+    }
+
+    if (form) {
+        form.addEventListener('submit', handleFormSubmit);
+    }
+
+    if (messages) {
+        console.log('Message will be hidden after 5 seconds.');
+        setTimeout(hideMessages, 5000);
+    }
+}
+```
+
+Now that we've added the event handlers to the checkboxes. If you refresh your browser, open the JavaScript console and try to check/uncheck the checkboxes in the todo list. You'll see the logs in the console, which ensures that our handlers are working now.
+
+### Async HTTP requests
+Now that we've added event handlers for the checkbox state change event. We'll need to trigger our JSON API that we've made to update the todo item completed status.
+
+Since, we've already added axios library to our application, we can use it as the following.
+
+```javascript
+function handleTodoCheckChange(e) {
+    var checked = e.target.checked;
+    var todoId = e.target.getAttribute('data-id');
+    var body = {'completed': checked};
+
+    console.log('todo: ', todoId, checked);
+
+    // Do a PATCH request with the completed data.
+    console.log('Sending a PATCH request');
+
+    axios.patch('/api/todos/' + todoId, body)
+        .then(function(response) {
+            console.log('Response received', response.statusText, response.data);
+        });
+}
+```
+
+The above code will send async http request to the `PATCH` endpoint we've created in our django backend application.
+
+If you refresh your browser and try checking on/off the checkboxes you'll notice that it's actually working. You can also check the records in the database to verify if the todo items are really being updated or not.
 
 ## Source Code
 Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-22).
