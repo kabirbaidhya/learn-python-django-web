@@ -116,8 +116,58 @@ You can test this API for other todo items too just by changing the `id` value i
 http://localhost:8000/api/todos/5
 ``` 
 
+## Using the JSON API
+Now that we've created our new update HTTP API on the server side, we'll need to be able to hit that API from our client-side JavaScript asynchronously in the background, this is what Ajax means.
+
+And we'll need to do that to update the completed status of the todo item when user changes the checked state of the checkbox for the todo items.
+
+### Adding Axios JavaScript Library
+We'll use [`axios`](https://github.com/mzabriskie/axios) http client library to do async http requests. So, first download it from `https://unpkg.com/axios@0.16.1/dist/axios.min.js`.
+
+We'll put it in our `todos/static/todos` directory.
+
+After you've downloaded the axios js file update your `base.html` to include that.
+
+You can append this at the end of your `<body>` tag just above the `<script>` that includes our `todo.js` script.
+
+```html
+    ...
+    <script src="{% static 'axios.min.js' %}"></script>
+    <script src="{% static 'todos/js/todo.js' %}"></script>
+</body>
+...
+```
+
+### Handling checkbox change event
+We'll need to add a handler to listen to the `change` event of our checkbox in the todo list. This is where we'll send request to our update API to update the completed state of the todo item.
+
+And since we'll also need to know the `id` of the todo item we're updating we'll need to add id explicitly in all the checkboxes. So, we'll pass in the `id` in the django todolist template where we have our checkbox.
+
+Find the `<input type="checkbox">` tag in your template and update the following.
+
+```html
+<input type="checkbox" {% if item.completed %}checked{% endif %} data-id="{{item.id}}" class="todo-complete-check" />
+```
+All we've done above is pass in the `id` of todo item as `data-id` attribute in the checkbox and give it a class `todo-complete-check`.
+
+Now let's add a new even handler function in our `todo.js` file for this checkbox.
+```javascript
+function handleTodoCheckChange(e) {
+    var checked = e.target.checked;
+    var todoId = e.target.getAttribute('data-id');
+
+    console.log('todo: ', todoId, checked);
+    // TODO: Implement logic here.
+}
+```
 
 ## Source Code
-Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-20).
+Check the full source code [here](https://github.com/kabirbaidhya/django-todoapp/tree/step-22).
 
 ## Read More?
+ 1. https://docs.djangoproject.com/en/1.11/topics/http/decorators/
+ 2. https://simpleisbetterthancomplex.com/tutorial/2016/08/29/how-to-work-with-ajax-request-with-django.html
+ 3. https://developer.mozilla.org/en-US/docs/Web/Events/change
+ 5. https://www.sitepoint.com/developers-rest-api/
+ 4. https://github.com/mzabriskie/axios
+ 5. https://docs.brightcove.com/en/video-cloud/concepts/postman/postman.html
