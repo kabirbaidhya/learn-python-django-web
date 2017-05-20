@@ -36,3 +36,8 @@ We'll do following tasks step-by-step for building the user login and authorizat
     - Allow only the logged in users to view the home page. So, redirect the user to login if user is not logged in.
 
  5. Link todo items to users.
+
+## Read More
+
+ 1. https://docs.djangoproject.com/en/1.11/topics/auth/default/#how-to-log-a-user-in
+ 2. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
