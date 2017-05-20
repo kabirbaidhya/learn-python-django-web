@@ -38,10 +38,10 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 5. [Form Processing](units/django/5/form-processing.md)
 6. [Validation](units/django/6/validation.md)
 7. [Asynchronous HTTP Requests (Ajax)](units/django/7/ajax.md)
-8. [Django Authentication & Admin](units/django/8/auth.md)
-9. Full backend development
-10. REST API Development
-11. Best Practices
+8. [Django Authentication](units/django/8/auth.md)
+9. [TodoApp Finalization](units/django/9/finalization.md)
+10. TodoApp Finalization
+11. REST API Development
 12. Application Deployment to Heroku
 
 

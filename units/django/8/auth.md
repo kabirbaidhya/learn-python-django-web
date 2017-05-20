@@ -1,5 +1,5 @@
-Django Authentication and Admin
-===============================
+Django Authentication
+=====================
 [Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/7/ajax.md) | [Next →]()
 
 In this tutorial we'll try to build a login and user authentication system in our todo application.
@@ -23,10 +23,10 @@ We'll do following tasks step-by-step for building the user login and authorizat
     - Display the username instead of the Login in the header if user is logged in.
 
  3. Create a signup page.
-   - Add a new url for the signup page
-   - Create a signup form template
-   - Create a view function to render the signup page
-   - Add a link in the home page to go to signup
+    - Add a new url for the signup page
+    - Create a signup form template
+    - Create a view function to render the signup page
+    - Add a link in the home page to go to signup
 
  4. Authorization
     - Allow only the logged in users to view the todo list
