@@ -2,6 +2,9 @@ REST API Development
 =====================
 [Home](https://github.com/kabirbaidhya/learn-python-django-web) | [← Prev](https://github.com/kabirbaidhya/learn-python-django-web/blob/master/units/django/10/hashtags.md) | [Next →]()
 
+## Slides
+Slides [here](https://www.slideshare.net/beveganbevegan/rest-46394978).
+
 ## API Development
 So far we've covered about developing a CRUD Web Application using Django and we have used a traditional MVC approach on developing the TodoApp. Now we'll see how we can expose a REST API for our TodoApp.
 
@@ -46,7 +49,7 @@ class TodoSerializer(serializers.ModelSerializer):
 ```
 In the above code, we've just created a new serializer `TodoSerializer` for our `Todo` model class.
 
-## Adding a ListView
+## Adding a list view
 In RESTful API routes there are generally two kinds of endpoints: collection endpoints and resource endpoints. 
 
 The collection endpoints are those which would return a list of resources on `GET` and which would create a new resource on `POST` and other HTTP verbs like `OPTIONS`, `HEAD` etc are supported as always.
@@ -81,12 +84,65 @@ urlpatterns = [
     url(r'^api/todos$', views.TodoListView.as_view(), name='api_todo_list')
 ]
 ```
+
+### Using Postman for testing
 Now that we have our todo list API ready, let's go and test it using Postman.
 
+#### Retrieving
 You can go and send a `GET` request on `http://localhost:8000/api/todos` and you should receive a list of todo items in JSON as a response.
 
+#### Creating
 And if you try a `POST` request on the same url `http://localhost:8000/api/todos` with a JSON payload of data you want to create, you'll see that it creates a new item.
 
+## Adding an item view
+With the above `TodoListView` we are able to add `Create` and `Read` of CRUD functionality in our TodoApp using REST API.
+Now we also need to be able to `Update`, `Delete` and `Read` individual todo items to complete all the CRUD operations for the todolist.
+
+To to this, we'll have to create a new API endpoint which we'll be a resouce endpoint unlike the collection endpoint we've created above.
+
+For this we'll add a new view class in our `view.py` file, `TodoItemView`:
+
+```python
+class TodoItemView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+```
+
+Now, this new view will be responsible for updating, retrieving and deleting individual todo items using the REST API.
+
+Finally, we'll need to add a new url that would point to this new view when a resource endpoint is hit. 
+
+The endpoint will have to be something like `/api/todos/:id` that supports methods `GET`, `PUT`, `PATCH` and `DELETE`.
+```
+GET     /api/todos/:id
+PUT     /api/todos/:id
+PATCH   /api/todos/:id
+DELETE  /api/todos/:id
+```
+This new endpoint will need to have `id` (Primary Key) as it needs to know which resource is going to be manipulated or retrieved.
+
+For this endpoint we'll add the following urn patten in our `urls.py` file:
+```python
+urlpatterns = [
+    ...
+    url(r'^api/todos$', views.TodoListView.as_view(), name='api_todo_list'),
+    url(r'^api/todos/(?P<pk>[0-9]+)$', views_api.TodoItemView.as_view(), name='api_todo_item')
+]
+```
+
+Now that we have both list and item endpoints ready for the todolist, we have exposed the full CRUD functionalities of our application into REST Api endpoints.
+
+### Using Postman for testing
+Using Postman let's tryout this new endpoint `/api/todos/:id`.
+
+#### Retrieving
+Do a `GET` request on `http://localhost:8000/api/todos/:id` with any todo item `id` you have in your database and you should receive the data for that particular todo item.
+
+#### Updating
+A `PATCH` request on the same url `http://localhost:8000/api/todos/:id` with a JSON payload of data for any item `id` will update the data in the database according to the data sent in the payload.
+
+### Deleting
+A `DELETE` request on the same url `http://localhost:8000/api/todos/:id` will delete the item in the database given by the provided `id`.
 
 ## Read More
 
