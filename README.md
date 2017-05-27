@@ -40,7 +40,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 7. [Asynchronous HTTP Requests (Ajax)](units/django/7/ajax.md)
 8. [Django Authentication](units/django/8/auth.md)
 9. [TodoApp Finalization](units/django/9/finalization.md)
-10. TodoApp Finalization
+10. [Add Hashtags](units/django/10/hashtags.md)
 11. REST API Development
 12. Application Deployment to Heroku
 
