@@ -126,7 +126,7 @@ For this endpoint we'll add the following urn patten in our `urls.py` file:
 urlpatterns = [
     ...
     url(r'^api/todos$', views.TodoListView.as_view(), name='api_todo_list'),
-    url(r'^api/todos/(?P<pk>[0-9]+)$', views_api.TodoItemView.as_view(), name='api_todo_item')
+    url(r'^api/todos/(?P<pk>[0-9]+)$', views.TodoItemView.as_view(), name='api_todo_item')
 ]
 ```
 
