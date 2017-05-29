@@ -42,7 +42,7 @@ This course mainly focuses on [Python](https://www.python.org/), [Django](https:
 9. [TodoApp Finalization](units/django/9/finalization.md)
 10. [Add Hashtags](units/django/10/hashtags.md)
 11. [REST API Development](units/django/11/rest-api.md)
-12. Application Deployment to Heroku
+12. [Deployment to Heroku](units/django/12/heroku-deployment.md)
 
 
 ## Stay Tuned
