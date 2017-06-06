@@ -111,7 +111,7 @@ Pretty neat. Isn't it?
 ### Hello World: Python 3
 
 <small>In `python3` it's </small>
-```python3
+```python
 print("Hello, World!")
 ```
 Mind the parenthesis. In python3 `print` is a function.
@@ -359,7 +359,7 @@ String value = Foo
 ---
 #### Example 8: Lists
 
-```
+```python
 fruits = ['Banana', 'Apple', 'Lime']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
