@@ -22,7 +22,7 @@ VCS, Git & GitHub
  * Every clone is really a full backup of the repository
  * Example: Git, Mercurial, etc.
 
-![](./distributed-git.svg)
+![](https://rawgit.com/kabirbaidhya/learn-python-django-web/master/units/git/distributed-git.svg)
 
 ## Git
 
