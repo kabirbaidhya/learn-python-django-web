@@ -102,7 +102,7 @@ print("Last Character = %s" % s[len(s) - 1])
 ---
 ### Example 2
 
-```
+```python
 s = input('Enter a string: ')
 
 # Count the number of vowels
