@@ -60,7 +60,7 @@ The SQL language consists entire vocabulary for database management, querying, i
 For example:
 This is an example SQL query that retrieves a list of users whose emails start with `foo@`:
 
-```
+```sql
 SELECT * FROM users WHERE email LIKE 'foo@%';
 ```
 
@@ -302,12 +302,12 @@ UPDATE table_name SET col1 = value1, col2 = value2... WHERE condition;
 ```
 
 Try this:
-```
+```sql
 UPDATE users SET last_name = 'Test' WHERE email LIKE '%test.com';
 ```
 
 Now if you check the records again, you should see this:
-```
+```sql
 SELECT * FROM users;
 ```
 ```
@@ -336,7 +336,7 @@ DELETE FROM users WHERE id = 1 or id = 3;
 ```
 
 Now if you check the records again, you should see 2 records have been removed:
-```
+```sql
 SELECT * FROM users;
 ```
 ```
