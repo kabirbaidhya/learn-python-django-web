@@ -100,7 +100,7 @@ PI = 3.14
 
 ### Using them in expressions
 Let's do some computation with these values we have now.
-```
+```python
 # Values we have
 radius = 20.0
 PI = 3.14
