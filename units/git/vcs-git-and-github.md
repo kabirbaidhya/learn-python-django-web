@@ -233,7 +233,7 @@ Merging a branch into your current branch is as simple as:
 $ git merge <branch>
 ```
 
-## Excercises
+## Exercises
 1. Create a git repository
 2. Add a python source file "hello.py" to print "Hello World!"
 3. Commit it
