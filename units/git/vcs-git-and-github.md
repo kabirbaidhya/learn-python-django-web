@@ -62,7 +62,7 @@ For other distros check the official docs https://git-scm.com/downloads.
 **Note: This tutorial more focuses on CLI usage. If you're a windows user and prefer GUI instead, please go through this instadinstadtutorial: https://code.tutsplus.com/tutorials/git-on-windows-for-newbs--net-25847.**
 
 ##### Check Installation
-Once installation is completed, veriy that git is proplery installed on your computer using
+Once installation is completed, veriy git is properly installed on your computer using
 
 ```bash
 $ git --version
@@ -74,7 +74,7 @@ git version 2.7.4
 
 #### Configuration
 
-The first thing you do after installing git is to set up your user name and email.
+The first thing you do after installing git is to configure your user name and email.
 ```bash
 $ git config --global user.name <name>
 $ git config --global user.email <email>
@@ -102,7 +102,7 @@ $ cd /your/project/directory
 $ git init
 ```
 
-To clone an already existing remote repository, run `git clone` command. This clones a remote repository into the local machine.
+To clone a remote repository, run `git clone` command. This clones a remote repository into the local machine.
 
 This will create a complete copy of remotely hosted repository in your local computer.
 ```bash
