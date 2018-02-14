@@ -12,13 +12,13 @@ VCS, Git & GitHub
 1. Collaboration
 2. Track complete change history
 3. Branching and Merging
-4. Versions
+4. Releases and Versions
 5. Revert/Rollback
 
 #### Distributed Version Control Systems
  * Code is hosted in a repository
  * Every client has a complete copy of the repository
- * Synchronize the changes in between client & server
+ * Synchronize the changes in between client and server
  * Every clone is really a full backup of the repository
  * Example: Git, Mercurial, etc.
 
@@ -27,7 +27,7 @@ VCS, Git & GitHub
 ## Git
 
 #### What is Git?
-Git is a Distributed Version Control System (VCS). More precisely, the most popular & widely used modern version control system today.
+Git is a Distributed Version Control System (VCS). More precisely, the most popular and widely used modern version control system used today.
 
 It was originally developed by Linus Torvalds the creator of the Linux kernel.
 
@@ -58,6 +58,8 @@ For other distros check the official docs https://git-scm.com/downloads.
 1. Download the installer from
    https://git-for-windows.github.io/
 2. Install Git
+
+**Note: This tutorial more focuses on CLI usage. If you're a windows user and prefer GUI instead, please go through this instadinstadtutorial: https://code.tutsplus.com/tutorials/git-on-windows-for-newbs--net-25847.**
 
 ##### Check Installation
 Once installation is completed, veriy that git is proplery installed on your computer using
