@@ -369,3 +369,4 @@ Want to read more? Go through these links.
 4. http://stackoverflow.com/questions/2570756/what-are-database-constraints
 5. https://technet.microsoft.com/en-us/library/ms191236.aspx
 6. https://www.digitalocean.com/community/tutorials/how-to-create-remove-manage-tables-in-postgresql-on-a-cloud-server
+7. https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e
