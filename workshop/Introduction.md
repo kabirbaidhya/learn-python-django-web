@@ -239,7 +239,7 @@ def fib(n):
     a, b = 0, 1
 
     while a < n:
-        print a
+        print(a)
         a, b = b, a+b
 
 
@@ -256,7 +256,7 @@ fib(1000)
 
 ```python
 # This prints Hello World!
-print "Hello World!"
+print("Hello World!")
 
 # This is a comment; single line comment
 
@@ -265,7 +265,7 @@ And this is a multiline comment.
 As this could take more than one line of comments.
 Like this.
 """
-print "Hello Again."
+print("Hello Again.")
 ```
 
 <small>Output: </small>
@@ -281,12 +281,12 @@ Hello Again.
 
 ```python
 # Printing more texts
-print "Hello World!"
-print "Hello Again."
-print "We enjoy typing."
-print "Learning python is easy."
-print "And fun."
-print "Printing text is way easier."
+print("Hello World!")
+print("Hello Again.")
+print("We enjoy typing.")
+print("Learning python is easy.")
+print("And fun.")
+print("Printing text is way easier.")
 ```
 
 <small>Output: </small>
@@ -305,12 +305,12 @@ Printing text is way easier.
 #### Example 3: Printing more than just texts
 
 ```python
-print "One + One =", 1 + 1
-print "One - Two =", 1 - 2
-print "Two * Five =", 1 * 5
-print "Four / Two =", 4 / 2
-print "Expression (12 * 5) - (2 ^ 3) + (1 / 2) =", ((12 * 5) - (2 ** 3) + (1 / 2))
-print "Seven is less than or equal to Six is", 7 <= 6
+print("One + One =", 1 + 1)
+print("One - Two =", 1 - 2)
+print("Two * Five =", 1 * 5)
+print("Four / Two =", 4 / 2)
+print("Expression (12 * 5) - (2 ^ 3) + (1 / 2) =", ((12 * 5) - (2 ** 3) + (1 / 2)))
+print("Seven is less than or equal to Six is", 7 <= 6)
 ```
 
 <small>Output: </small>
@@ -334,9 +334,9 @@ last_name = "Baidhya"
 dob = "July 30, 1992"
 home_town = "Kathmandu, Nepal"
 
-print "Hi! I am", first_name, last_name, "."
-print "I was born on", dob, "."
-print "I'm from", home_town, "."
+print("Hi! I am", first_name, last_name, ".")
+print("I was born on", dob, ".")
+print("I'm from", home_town, ".")
 ```
 
 <small>Output: </small>
@@ -359,9 +359,9 @@ dob_day = 30
 dob_year = 1992
 difficulty = "easy"
 
-print "Hi! I am %s %s." % (first_name, last_name)
-print "I was born on %s %d, %d." % (dob_month, dob_day, dob_year)
-print "Python is %s to learn." % difficulty
+print("Hi! I am %s %s." % (first_name, last_name))
+print("I was born on %s %d, %d." % (dob_month, dob_day, dob_year))
+print("Python is %s to learn." % difficulty)
 ```
 
 <small>Output: </small>
@@ -377,14 +377,14 @@ Python is easy to learn.
 #### Example 6: User Input
 
 ```python
-print "What is your name?",
+print("What is your name?")
 
 # This would take input from the user
 # and store it in a variable.
 name = raw_input()
 
-print "Hi! %s. \nIt's nice to meet you." % (name)
-print "Hope you're doing good."
+print("Hi! %s. \nIt's nice to meet you." % (name))
+print("Hope you're doing good.")
 ```
 
 <small>Output: </small>
@@ -431,10 +431,10 @@ a_floating_point = 17.60
 a_boolean = True
 a_string = "Foo"
 
-print "Integer value = %d" % an_integer
-print "Float value = %f" % a_floating_point
-print "Boolean value = %r" % a_boolean
-print "String value = %s" % a_string
+print("Integer value = %d" % an_integer)
+print("Float value = %f" % a_floating_point)
+print("Boolean value = %r" % a_boolean)
+print("String value = %s" % a_string)
 ```
 
 <small>Output: </small>
@@ -457,9 +457,9 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 # This is called list comprehension
 even_numbers = [x for x in numbers if x % 2 == 0]
 
-print "Numbers: %s" % numbers
-print "Even Numbers: %s" % even_numbers
-print "Fruits: %s, %s and %s" % (fruits[0], fruits[1], fruits[2])
+print("Numbers: %s" % numbers)
+print("Even Numbers: %s" % even_numbers)
+print("Fruits: %s, %s and %s" % (fruits[0], fruits[1], fruits[2]))
 ```
 
 <small>Output: </small>
@@ -481,9 +481,9 @@ data = {
     "home_town": "Kathmandu, Nepal"
 }
 
-print "Hi! I am %s." % data["name"]
-print "I was born on %s." % data["dob"]
-print "I'm from %s." % data["home_town"]
+print("Hi! I am %s." % data["name"])
+print("I was born on %s." % data["dob"])
+print("I'm from %s." % data["home_town"])
 ```
 
 <small>Output: </small>
